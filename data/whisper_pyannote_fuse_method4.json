@@ -1,0 +1,621 @@
+{
+  "dialogs": [
+    {
+      "speaker": 1,
+      "start": 0.24744027303754265,
+      "end": 22.03924914675768,
+      "text": " Hey, what's up everyone? This is Sam. In today's interview, part of our guest host series, you'll hear a conversation led by longtime friend of the show, John Bohannon, Director of Science at Primer AI, and former journalist for publications like Science Magazine, Wired, and others. I'm sure you're going to enjoy this conversation, so let's jump in. Peace."
+    },
+    {
+      "speaker": 2,
+      "start": 24.496587030716725,
+      "end": 24.803754266211605,
+      "text": " you"
+    },
+    {
+      "speaker": 2,
+      "start": 32.5,
+      "end": 33.43856655290102,
+      "text": " Good morning, Marty."
+    },
+    {
+      "speaker": 0,
+      "start": 33.77986348122867,
+      "end": 34.616040955631405,
+      "text": " Good morning, John."
+    },
+    {
+      "speaker": 2,
+      "start": 35.14505119453925,
+      "end": 52.27815699658703,
+      "text": " So we are just a few miles away from each other across a body of water. I'm in San Francisco. You're across the bay in Berkeley at your office at University of California Berkeley where you are the head of the School of Information and a computer scientist who's been in the game for many decades."
+    },
+    {
+      "speaker": 0,
+      "start": 52.27815699658703,
+      "end": 52.89249146757679,
+      "text": " That's right."
+    },
+    {
+      "speaker": 2,
+      "start": 52.89249146757679,
+      "end": 72.14163822525597,
+      "text": " So I'm excited to finally do this interview because it's been almost a year in the making. We had a great interview here on the show with Orin Etzioni, former head of AI2 in Seattle. After that interview, I asked Orin who would be a really good guest who would have something worth sharing with the audience, and you were the first person he said."
+    },
+    {
+      "speaker": 0,
+      "start": 72.2098976109215,
+      "end": 84.6331058020478,
+      "text": " Well, I listened to that interview and it was an excellent interview. Orrin is so articulate and you're a great interviewer. And I'm really honored to be here. And I'm really honored that Orrin thought it was worthwhile to recommend me."
+    },
+    {
+      "speaker": 2,
+      "start": 84.73549488054609,
+      "end": 87.5,
+      "text": " And you don't do that many interviews, from what I gather."
+    },
+    {
+      "speaker": 0,
+      "start": 87.65358361774744,
+      "end": 109.03583617747441,
+      "text": " No, I don't. I'm a little bit camera shy, even though I do have to be on camera a lot. Also, I like to be pretty careful about what I say, kind of more from the scientist's perspective. I think Oren is really great at linking science to business and where technology is going. But yeah, I guess I'm just a little bit shy that way."
+    },
+    {
+      "speaker": 2,
+      "start": 109.20648464163823,
+      "end": 150.24744027303757,
+      "text": " And that brings me to kind of the big story here. For those listening at home, Marty and I had a chat recently in advance of this interview, just to talk about what we might talk about. And something really striking was that there's this moment, let's call it the chat GPT moment. It's really the large language model moment, where artificial intelligence seems to be at some kind of inflection point. And you told me about your long career, and how you have kind of seen these moments before, and you're more cautious about speaking publicly, to add to the hype cycle, because it's often disappointing, and often regrettable. You know, it's easy to say things that you later think were overhyped. Why is this different?"
+    },
+    {
+      "speaker": 0,
+      "start": 150.31569965870307,
+      "end": 210.38395904436862,
+      "text": " Yeah, so I have seen a lot over the years. I've been, I'd say, primarily in natural language processing, that part of AI. And it's just been a slog in terms of making progress in having machines be able to process language the way people do. I entered it really because I was interested in the brain and interested in language, and I thought it'd be kind of neat if we could have a computer do something with language, maybe make cartoons speak, something like that. Animation interested me as well. We're so far from accomplishing anything that would be realistic, that was more of a scientific endeavor. I think I'm more of a scientist at heart than, you know, I'm not an entrepreneur, for example. So I've seen claims, for example, I remember, I guess in the early 90s, there was this claim that Oracle bought some NLP company and it was going to transform everything. And you know, it was just so obviously ludicrous. But you also see, you know, I remember when WebFountain came out with IBM and that was going to transform everything. And, you know, it's very much."
+    },
+    {
+      "speaker": 2,
+      "start": 210.19624573378843,
+      "end": 211.51023890784984,
+      "text": " Or how about IBM Watson?"
+    },
+    {
+      "speaker": 0,
+      "start": 211.51023890784984,
+      "end": 256.51023890784984,
+      "text": " Well, you know, Watson was a special case in that it was amazing what they did with Jeopardy, and we can talk about that a bit more. But then there was the claim that it was going to transform healthcare. And again, there was no path from that to directly to healthcare being transformed in the immediate future. So I learned that if you read the New York Times regularly, as I do, technology is in the business section, as opposed to the science section. And that's kind of how technology is talked about, at least in the US. And of course, there is scientific reporting on it, and your podcast, I think, is wonderful in that it goes into a lot of technical details, which is really exciting. But there's always the business angle when it comes to technology, even when I started out in the late 80s. And, you know, at most there were PCs."
+    },
+    {
+      "speaker": 2,
+      "start": 222.27815699658703,
+      "end": 222.48293515358364,
+      "text": " You"
+    },
+    {
+      "speaker": 2,
+      "start": 236.56143344709898,
+      "end": 236.69795221843003,
+      "text": ""
+    },
+    {
+      "speaker": 2,
+      "start": 256.78327645051195,
+      "end": 278.8651877133106,
+      "text": " Well, in the late eighties and into the nineties, you became one of the main researchers in search and search really defined the era that I think is probably coming to a close, the Google era, the era of search, search driving everything. And so you did really see the business side of your research explode and change the world. Are we in a moment like that now?"
+    },
+    {
+      "speaker": 0,
+      "start": 279.1211604095563,
+      "end": 352.6023890784983,
+      "text": " Well, I wouldn't mind talking about search for a few minutes since it is close to my heart. I mean, I was interested in search because I wanted to be able to find things. I didn't like the library catalog when I was a little kid. And in fact, when I was an intern, I tried to be an intern in my public library in high school and I was rejected because I wasn't fast enough with filing alphabetically in the card catalog. But I never thought that makes sense. So actually I always wanted to do a dynamic, smart version of the card catalog, which is what I did in search user interfaces. There's only one spot in the bookshelf for the book representation. What I focused on was search user interfaces. I wouldn't say I was the leading person in search, but I was a leader in search user interfaces, which was kind of a hybrid topic at the time because most of the search field was more on algorithms and not so much on the user interface. So I brought those two together. And that was super exciting because the technology or the kind of framework that I advocated for and showed empirically worked, did become the standard for, it's still a standard faceted interaction like what you see on a website when you're shopping or library catalogs where you can slice and dice and filter in different ways to find the items that you want. Getting that interface to work well was the big challenge and that was sort of the breakthrough."
+    },
+    {
+      "speaker": 2,
+      "start": 352.7047781569966,
+      "end": 356.32252559726965,
+      "text": " What was the big problem with search interfaces before you got into the game?"
+    },
+    {
+      "speaker": 0,
+      "start": 356.7320819112628,
+      "end": 417.3805460750853,
+      "text": " Well, when I got into the game, most software did not have search full stop. I mean, if you had an application, you couldn't search for material within it. It was just rare. It just didn't happen much. When I got into the game, library catalogs were searched by saying, you know, P N Bonneman comma J to find the personal name of the author. I mean, it was command line. And then there were Westlaw and these very expensive tools that you could subscribe to, say, if you were a lawyer, it was all keyword based. But the interface, there was no thought to the interface. It was just a listing of the output that you got, usually in chronological order. And so there was just, was no there, there. The web changed things, but even with the web, the initial search was, you know, the 10 blue links, which has actually been really hard to improve on. And I would say until now, which we could get to the new moment, you know, Google's inched towards showing answers to questions. But I remember talking with someone there saying that they were conservative initially because they didn't want to show incorrect information. And I thought that was the right way to go."
+    },
+    {
+      "speaker": 2,
+      "start": 415.6399317406143,
+      "end": 415.99829351535834,
+      "text": " Mmm."
+    },
+    {
+      "speaker": 2,
+      "start": 417.3805460750853,
+      "end": 429.00170648464166,
+      "text": " Isn't that one of the big shifts? It's like once upon a time, the purpose of search was to find a document or find a resource. But nowadays, you want the answer to a question. It's almost a shift in intention."
+    },
+    {
+      "speaker": 0,
+      "start": 429.18941979522185,
+      "end": 435.7935153583618,
+      "text": " Actually, I speak to that. I think people always wanted to ask questions, but it wasn't possible to get an answer."
+    },
+    {
+      "speaker": 2,
+      "start": 435.7935153583618,
+      "end": 437.8071672354949,
+      "text": " So we were just adapting to a bad system."
+    },
+    {
+      "speaker": 0,
+      "start": 438.0460750853242,
+      "end": 489.9061433447099,
+      "text": " Well, I always like to use the example of this old website called Ask Jeeves, which was an attempt to allow people to ask questions and get answers. And it didn't work because the technology didn't work, but people kept using it and always said they liked it because they liked the idea of being able to get, ask a question and get an answer. And I have some old screenshots of it. It just didn't work. It's like someone saying, oh, people like the mouse, but now we have touchscreens and their tastes have changed. And I'm like, no, no, it's that we didn't know how to do touchscreens. We didn't know how to do gestures technologically. In the early days, it was a bridge to that. So often the interface we see now is the interface people always wanted, but we didn't have the technology to support it. And I'd say that's true for question answering. Now there's an exception for scholars and people doing research who want to see the documents and primary resources, but that's always been a minority."
+    },
+    {
+      "speaker": 2,
+      "start": 489.9402730375427,
+      "end": 502.67064846416383,
+      "text": " Yeah, so that brings us to the current moment where the machine behind your screen that's going to try and answer your questions is suddenly, and I really mean suddenly able to answer it almost like a human. It feels like at times."
+    },
+    {
+      "speaker": 0,
+      "start": 503.080204778157,
+      "end": 574.240614334471,
+      "text": " I agree. I think it's a sea change. So I gave a keynote talk in October to the Information Visualization Society, the IEEE Society. And in that talk, part of what I did was talked about, you know, this is coming. We are going to see, instead of people developing visualizations manually, it's probably going to be done with text interface. And that's a pretty radical thing to say. And it was a month later that ChatGPT came out. And again, I told the audience at that time that I've been in the NLP field for more than 25 years, maybe 30 years. And I've never said this is a major change. And I say it now, I was saying it right before ChatGPT. And it is transformational in terms of what we can do with processing language and producing language. It's not transformational in everything, as some of the hype says. Just like we had a mouse and then we had a touchscreen, we had keyword query or statistical ranking, or we had these very complex pipelines for making natural language processing systems. And now it's kind of one relatively simple architecture that does everything as opposed to specific algorithms. And it's kind of head spinning, really."
+    },
+    {
+      "speaker": 2,
+      "start": 574.4795221843003,
+      "end": 581.9027303754266,
+      "text": " Well, simple schematically, but very complicated in terms of what structure might be hidden in all those billions of neurons."
+    },
+    {
+      "speaker": 0,
+      "start": 582.5341296928327,
+      "end": 596.0836177474403,
+      "text": " Yeah, it's simple in terms of what the people have to do and complex in terms of what the program is doing. I actually have an example that I was just trying last night because in the same talk, I gave an example of comparatives being very difficult to process automatically."
+    },
+    {
+      "speaker": 2,
+      "start": 595.7252559726962,
+      "end": 596.7320819112628,
+      "text": " What's the comparative?"
+    },
+    {
+      "speaker": 0,
+      "start": 596.7320819112628,
+      "end": 651.3054607508533,
+      "text": " So if you have, say, a review of a camera and someone in their regular casual language is saying, oh, the DLSR has a wider angle, but the pixels are not as crisply retained. What are they saying is better than what? There's a lot implied there, and there's an implicit comparison between kind of the overall merits of some camera and then these specific components, the pixels and so on. And I use that as an example of something that would be very hard to write an algorithm to process automatically. And one of the reviewers of the paper that I wrote said, yeah, that was true, but I just put this in ChatGPT and it worked really well. So last night I put all these super complex descriptions of reviews of cameras in ChatGPT, and it did an amazing job of saying what was being compared to what. But I still say that it would be very hard to write an algorithm to process the language to do that."
+    },
+    {
+      "speaker": 2,
+      "start": 651.203071672355,
+      "end": 651.9368600682594,
+      "text": " Absolutely."
+    },
+    {
+      "speaker": 0,
+      "start": 651.9368600682594,
+      "end": 656.561433447099,
+      "text": " It's a general purpose tool that does that as a side effect of what else it does."
+    },
+    {
+      "speaker": 2,
+      "start": 656.8003412969283,
+      "end": 659.4283276450512,
+      "text": " Yeah, it's sort of an all-purpose reasoning machine."
+    },
+    {
+      "speaker": 0,
+      "start": 659.5648464163822,
+      "end": 663.3532423208192,
+      "text": " It's something. I don't know what it is."
+    },
+    {
+      "speaker": 2,
+      "start": 663.3532423208192,
+      "end": 772.7559726962457,
+      "text": " So I watched your keynote and found it really, really remarkable. And something that was gestating in my mind as I watched you walk through all the latest research that you could dig up on the human computer interface and also language and the visual component of people trying to understand complex topics was that we're probably soon heading into a world where you can essentially go to a whiteboard with a model like chat GPT. So at work, when I need to understand something really complicated or communicate something really complicated or collaborate with someone on a really complicated problem, we go to the whiteboard. That's sort of the best environment to do this. And what that means is you have all the affordances of language, just speaking one-on-one. And you also have this whiteboard next to you that you can diagram things, correct things, point things out visually. And so it's sort of maximum bandwidth and it feels like the most comfortable way to navigate really complicated things. I think that we've clearly gone way down the road of the chat side of this, the language side of this, you can interact with chat GPT and talk about really complicated things, maybe even solve problems together, but there isn't yet that whiteboard, but I think it's coming. And we saw a hint of it with the demonstration video of GPT four. So it seems safe to say that we're headed towards AI whiteboards and you have been grappling with the nuts and bolts of how you communicate both visually and with language and how the two play off each other. Sometimes synergistically love to pick your brain just on what it's going to mean heading into a world of AI whiteboards. And of course it goes way beyond whiteboards. It could show you arbitrary images, videos, it generates things that finds from the internet and actually, you know, points things out and illustrates it."
+    },
+    {
+      "speaker": 0,
+      "start": 772.9607508532423,
+      "end": 819.8720136518772,
+      "text": " Yeah, I think that there's a lot of potential for these tools, these large language model-based tools to be collaborators in thinking. I think that's what you mean by the whiteboard. But after I'd done my keynote, I did actually ask Chachi Pate to make an outline of a talk on the subject that I had selected, and it was not very creative. It said things that made sense, but it would have been, I guess, somebody who kind of knew the field, but was not innovating, was not seeing the future. And so I don't know that it's capable of doing that, yet I listened to the interview with Sergey, and he, here at Berkeley, Sergey Levin on reinforcement learning, and he kind of pointed out that it's not using technology to kind of do future sequencing, but they're working on it, I guess, or they might work on it."
+    },
+    {
+      "speaker": 2,
+      "start": 783.5750853242321,
+      "end": 784.0870307167236,
+      "text": " Yeah."
+    },
+    {
+      "speaker": 2,
+      "start": 819.8720136518772,
+      "end": 834.6160409556314,
+      "text": " Yeah, no doubt the human is going to have to do most of the intellectual heavy lifting in the beginning. I mean, what is it going to mean for information sharing and explaining when we can use something as powerful as chat GPT in the language regime, also in the visual regime?"
+    },
+    {
+      "speaker": 0,
+      "start": 834.9061433447099,
+      "end": 904.5136518771332,
+      "text": " Yeah, so, and referring back to that keynote a bit, the topic is the intersection of language and visualization. Because the information visualization community focuses reasonably on how to visualize data, how to visualize information. And there's been less of a focus of how does language or text overlay on that or interact with that. And I mentioned this in our earlier conversation with John that for many semesters or many years, I was teaching natural language processing in the fall and information visualization in the spring and thinking about what sort of information can be represented in each modality and can you convert one to the other directly? And I think the answer is no, they show or they explain different things. Visuals explain different things than text. And if you think about the movie versus the book, that's like the best example. There are some books written to be made into movies. You think about the Harry Potter series, for example, and they're very true to the original, I think, but there's a lot that don't transfer so well. And a lot of it is about interiority and mood that mood is expressed differently with words than with images. And they complement each other, of course, which is why the soundtrack is so important for the film. When you become a grownup, you don't have pictures in your novels anymore."
+    },
+    {
+      "speaker": 2,
+      "start": 904.5648464163822,
+      "end": 921.7491467576792,
+      "text": " Except you pointed out in your keynote that really lovely classic book by Scott McCloud on how comic books work. You pointed out that there's a method to it. There's a kind of balance between the visual and the language, and sometimes one can do most of the work and sometimes the other. Couldn't a model learn to do that?"
+    },
+    {
+      "speaker": 0,
+      "start": 921.9027303754267,
+      "end": 967.0904436860069,
+      "text": " Oh, well, I could have model learned to do that. I mean, I think you could give it instructions to learn to do that. I think, you know, right now what I'm interested in is how do people understand these things and then how best to express information so that you promote understanding and you don't promote misinformation or you try to combat misinformation. I think it's really important that we understand how, and this is the human computer interaction, the HCI side of the AI HCI coin, as I think about them, understanding how people understand things so that we know what to tell the computers to do. Right now, we have people designing visualizations and they don't necessarily know how to put the language on the design and neither will probably the computer, or if the computer does know, we at least need to know how to assess if it did a good job or not, which I think we need to do more work on."
+    },
+    {
+      "speaker": 2,
+      "start": 967.1587030716723,
+      "end": 1010.622866894198,
+      "text": " Yeah, but just to go out one step out onto the limb, I know you're very wary of speculation, but this one feels like a safe speculation. I think that there are going to be emergent capabilities with multimodal models that can deal both with the visual and the language side. And we don't know exactly what they'll be, but if we follow the trend with GPT-3 solely on the language side, I wonder what kind of capabilities even are there to acquire on the visual side. Something that comes to my mind is simplifying something visually. Sometimes as simple as underlining something can make something salient that helps explain the whole. You have a project called Scholar-PHY with Andrew Head at Berkeley. Is he a student of yours?"
+    },
+    {
+      "speaker": 0,
+      "start": 1010.844709897611,
+      "end": 1019.2747440273038,
+      "text": " He was a student and a postdoc and now he's a professor at UPenn. And it was also in collaboration with people at AI2, you know, hence the Orin reference too."
+    },
+    {
+      "speaker": 2,
+      "start": 1014.2918088737201,
+      "end": 1015.401023890785,
+      "text": " Oh wow. It's also in color, yeah."
+    },
+    {
+      "speaker": 2,
+      "start": 1019.3430034129693,
+      "end": 1045.4351535836179,
+      "text": " Yeah, I saw a breakdown of the project. It's so neat. And one of the really neat insights is when you read something that's got a lot of complicated mathematics in it, your brain is doing a ton of work behind the scenes. And if you had a better interface, for example, click on a variable in a formula, and just have it automatically pop out and say, this is what that represents. So you offload some of that cognitive work you have to do. I wonder if those kind of skills could be learned."
+    },
+    {
+      "speaker": 0,
+      "start": 1045.622866894198,
+      "end": 1049.7184300341298,
+      "text": " I hope so. And you mean the skills of visually showing the information? Yeah."
+    },
+    {
+      "speaker": 2,
+      "start": 1049.240614334471,
+      "end": 1053.831058020478,
+      "text": " Yeah, all those tricks that a good visual explainer just knows how to do."
+    },
+    {
+      "speaker": 0,
+      "start": 1054.155290102389,
+      "end": 1107.1587030716723,
+      "text": " Well, I am optimistic that these new models will make that automation task that we had more effective. We worked on algorithms to do it automatically, but PDFs are really tricky to process if you're looking at the image level. And it's very hard to find definitions within a scientific paper because not everything is defined in a crisp way. And so really what you want to do is generate your own text, but you want it to be accurate. It's based on the text of the paper. So we are actually looking to see if the latest models can help with the automation of that task. But going back to a point you made earlier about creativity or new synthesis with these models, I think someone who was hosted earlier on this podcast pointed out just even the avocado sofa is a synergy of image. A human had to ask the query, but then the system was able to blend these images together into something new, although it doesn't blend well if they don't go well together."
+    },
+    {
+      "speaker": 2,
+      "start": 1107.2610921501707,
+      "end": 1127.6706484641638,
+      "text": " In case anyone listening doesn't know what the avocado chair is, this was the sort of amazing Dali moment. So the Dali model came with a paper and in that paper they had some images as examples of what it could do. And one of them was make a chair made of an avocado, something like that. And it was sort of amazingly convincingly good. It really was."
+    },
+    {
+      "speaker": 0,
+      "start": 1127.2610921501707,
+      "end": 1136.1689419795223,
+      "text": " Although they are a little cherry picked because if you try to combine two things that don't often go well together or don't appear together, it doesn't work or at least it didn't work when I was playing."
+    },
+    {
+      "speaker": 2,
+      "start": 1136.1348122866893,
+      "end": 1136.8856655290103,
+      "text": " It'll flub it."
+    },
+    {
+      "speaker": 0,
+      "start": 1136.8856655290103,
+      "end": 1223.575085324232,
+      "text": " Yeah, but still, it's a great example, you know, of synergy with these tools. And what I noted in the keynote was that copilot these systems that aid in programming, rather than, you know, there's been a long debate in HCI about what you're developing, say a user interface or doing data analysis. Should it be a command line or should it be a graphical user interface, a GUI? And of course the answer is neither works perfectly. And people who are practitioners use a blend of both. But it seems now, as I said about Ask Jeeves, what people really want to do is just use language to say, do this, do that, and have the program get written. And then point and use gestures and the interface to tweak it a bit. This multi-modality. And again, there are tools to do that, but they're just not perfect. And the more that the algorithms improve, like with ChatGPT, the more effectively we'll be able to help people design visualizations where they don't have to do a lot of coding. It's again, because it works, this general purpose tool that we were talking about as a side effect of being, you know, produce the next word, it's able to do all these other things. And I think we don't understand why, but that includes writing code or, you know, being smart about adding things into code and so on. It wasn't designed for that, but it seems like it will be very effective at making it easier to design visualizations. The problem is, will it design good visualizations? And that's where we still have the human component."
+    },
+    {
+      "speaker": 2,
+      "start": 1223.7116040955632,
+      "end": 1232.721843003413,
+      "text": " Well, I think the safe way to use these things is to generate first drafts and iterate, but that you have to be the human editor who makes the final call and do the driving."
+    },
+    {
+      "speaker": 0,
+      "start": 1232.7559726962459,
+      "end": 1245.042662116041,
+      "text": " Yeah, I agree. The work that we all do in the viz field can help determine what makes a good design, help give guidelines. We do research, empirical research, and then we produce guidelines for practitioners to follow."
+    },
+    {
+      "speaker": 2,
+      "start": 1245.230375426621,
+      "end": 1283.5068259385666,
+      "text": " So bringing this all back to this moment, you're a natural language processing practitioner. You've spent years trying to teach machines to do useful things with language. And here we are suddenly in a moment where, I don't know about you, but I feel like, wow, a lot of the things we solved, you don't have to worry about anymore. Just sort of more and more and more of all that hard algorithmic hand-rolled feature engineering world is getting eaten up by large language models that can simply speak. And they seem to have cognitive abilities that we would never have dreamed would be in a machine."
+    },
+    {
+      "speaker": 0,
+      "start": 1283.745733788396,
+      "end": 1288.8139931740616,
+      "text": " Well, I'm not going there with you on the cognitive abilities that I'm very cautious and skeptical about."
+    },
+    {
+      "speaker": 2,
+      "start": 1288.5068259385666,
+      "end": 1290.1109215017066,
+      "text": " What should we call them, behaviors?"
+    },
+    {
+      "speaker": 0,
+      "start": 1290.3839590443686,
+      "end": 1419.189419795222,
+      "text": " I guess I don't have my favorite word for it yet. Capabilities. It works a lot better than it used to work. There's a lot of people looking into, why does it work? But each time people start to make some progress on that, then a new model comes out that's even harder to understand because the scale is so much larger and we're not good at thinking at very large scale. So I think it's going to take years before we understand what's going on. I don't think it's cognition. I'm very skeptical about that. It's really, I mean, we get into philosophy and the Chinese room, that's an old John Searle thought experiment. I mean, it's unfortunate, I guess, the use of Chinese in that particular example, but the idea being if you replace each piece of your brain with a little like component, electronic component, and you eventually replace every piece, is it still a brain? Are you still thinking? Yes. There's philosophy thought experiments. You might want to say, oh, well, this model that's basically just a bunch of numbers, a bunch of weights that have been trained is thinking, because you can say that about the brain, but I'm not convinced. I think there's a lot more going on in the brain than is going on in these models. I agree with you. They're very good at mimicking, at producing language, and because language is distinctly human, it feels to a lot of people like it's human. When people are driving in their cars, they name their car, even old cars, they had no electronic components. They would name their cars, they would anthropomorphize their cars, they feel a part of their cars. This is what we do with technology. People are going to get used to it and then it's going to become old news. And I think it's great that we don't have to write all these tokenizers. The LP pipeline didn't work. It was a mess. And there's always new problems and new questions to investigate from a research perspective. Researchers will not be out of business. Of course, it does raise even more societal issues and dangers because of the ability to fake information, to spread misinformation, and for people to not know what's real and what's true. So we're living through a very chaotic moment right now. I think we're going to look back 10 years from now and we're going to go, wow, that was a chaotic time in technology. That was a chaotic time politically. And hopefully we'll be able to look back and say, thank goodness we made it through. Okay. I'm optimistic we will."
+    },
+    {
+      "speaker": 2,
+      "start": 1354.7866894197953,
+      "end": 1355.486348122867,
+      "text": " I agree with you."
+    },
+    {
+      "speaker": 2,
+      "start": 1419.4112627986349,
+      "end": 1434.0529010238909,
+      "text": " Well, the curve you're describing is pretty smooth. It implies that there's going to be another side to this. But if things keep exponentially changing, there won't necessarily be that moment, because it'll always feel like it does right now."
+    },
+    {
+      "speaker": 0,
+      "start": 1434.3600682593858,
+      "end": 1454.0358361774745,
+      "text": " Well, the technology that this breakthrough with these models and really with training on huge amounts of compute, huge amounts of data, I think it can only go so far, right? We don't know the limits of it, but it's not going to be everything. If you look at people that are trying to study the brain, just there's other things going on there, different kinds of structure and so on."
+    },
+    {
+      "speaker": 2,
+      "start": 1454.1382252559727,
+      "end": 1455.5204778156997,
+      "text": " You think we're running out of data?"
+    },
+    {
+      "speaker": 0,
+      "start": 1455.9129692832764,
+      "end": 1468.1484641638226,
+      "text": " No, no, I don't think that's it. I think that the technique, it's a very specific technique. That alone, I don't think is going to be sufficient for being the same as humans. I'm not saying we could ever do it."
+    },
+    {
+      "speaker": 2,
+      "start": 1468.2337883959044,
+      "end": 1476.0494880546075,
+      "text": " Some people do argue that sequence prediction, which is essentially what is driving this whole craze, might be all you need. What do you think about that?"
+    },
+    {
+      "speaker": 0,
+      "start": 1476.4419795221843,
+      "end": 1539.598976109215,
+      "text": " Well, it's certainly all you need for certain tasks. We're seeing that now. It's really quite amazing. There is sometimes fine tuning on the other side. But again, who knows? I personally have been wrong about this particular technology. I think like a lot of people, I just didn't know how to think in terms of billions of parameters and we're just not good at that. There were some very ambitious people that just sort of went for it and surprised all of us. I admit it, I did not see this coming and I was surprised by it. And we have certainly in the research community, it's been developing gradually. So Word2Vec came along. So going back even farther, again, when I was doing early in the statistical NLP time, people were looking at SVDs, singular value decomposition and LSA, latent semantic analysis, which is similar in a lot of ways. It was putting words in a matrix, well, words by document matrices and trying to find similarities. Even before that, I was trying to solve the a thesaurus or the synonym problem to help with search. So in search, you look for cat and it's really feline and you don't find anything. Going back to the beginning of our conversation."
+    },
+    {
+      "speaker": 2,
+      "start": 1497.3805460750855,
+      "end": 1497.9266211604097,
+      "text": " surprised"
+    },
+    {
+      "speaker": 2,
+      "start": 1539.3259385665528,
+      "end": 1545.3668941979522,
+      "text": " And you didn't want users to have to put in every synonym imaginable for a cat, just to find text about cats."
+    },
+    {
+      "speaker": 0,
+      "start": 1545.793515358362,
+      "end": 1637.2952218430034,
+      "text": " Well, library catalogs had synonyms in the early days. They weren't that good. It weren't dynamic. They didn't handle new technology and they were hard to use. So WordNet came along and developed as a linguistic tool. And I was the first person to download it, actually, when they had an FTP available. Did work on that. And it was like, oh, we can have a thesaurus. But, you know, it never worked. Whenever you had automatically recommended terms for a term, some of them were right and some were wrong. And that was true of SVD and LSA as well. They worked in some cases. They didn't work in other cases. And it wasn't until Word2Vec came along and then people actually then refined it to have different senses that it actually started to work. And so I was saying, wow, this actually works. And I've seen 20 years of this not working. And of course, that kept being refined and being made more sophisticated with the transformers came along and other really large things. So in the research community, it's been happening gradually. There were a lot of debates about counting versus probabilities and all this. So it's not out of the blue, but I do, again, I admit that in this last year between, you know, the combination of the image plus text generation and these language models where the input could be text, we never thought the input could be text and then the output would be all these things. Right. We thought we had to program things. And I don't think the people who developed these models expected that either. It was, I believe it was a surprise to them. So it is different now. I don't think everything's solved. I don't think it's AGI, but the tools are much more effective than they used to be."
+    },
+    {
+      "speaker": 2,
+      "start": 1588.4556313993176,
+      "end": 1588.6262798634814,
+      "text": " Yep."
+    },
+    {
+      "speaker": 2,
+      "start": 1630.1962457337884,
+      "end": 1630.5716723549488,
+      "text": " And I don't think"
+    },
+    {
+      "speaker": 2,
+      "start": 1637.4658703071673,
+      "end": 1665.486348122867,
+      "text": " Well, like you said, it's all about capabilities. And it turns out if you teach a very big neural network how to predict the next word on a huge amount of internet text, all these really neat emergent capabilities come into your hands. Couldn't have been predicted. In fact, no one really thought it would work as well as it does, I'm sure. But it does. I wonder what happens when you teach a model to predict the next image in every YouTube video. What capabilities emerge?"
+    },
+    {
+      "speaker": 0,
+      "start": 1665.8276450511946,
+      "end": 1671.8515358361776,
+      "text": " Yeah, it's going to be interesting. You know, it should be much better at generating video. I mean, I guess there's already work on generating videos."
+    },
+    {
+      "speaker": 2,
+      "start": 1671.8515358361776,
+      "end": 1711.1689419795223,
+      "text": " I feel like generating videos is kind of like that unicorn story moment. So you remember in the early days of GPT-3, when they were trying to show how great it was, they said, look, you can start the first sentence of a story about something that it definitely has never seen. It was something about unicorns and it could just write a story and it's coherent and it's a story. Well, I think there will be that video moment where you start with an image and you just say, hey, finish this. Make this a one minute video from this scene. And that'll happen. But just like with GPT-3, the thing that's going to blow us away are the things we can't predict it'll be able to do. It's going to have capabilities that just emerge."
+    },
+    {
+      "speaker": 0,
+      "start": 1711.5273037542663,
+      "end": 1721.0324232081912,
+      "text": " Yeah, well, I have to admit that I was not at all impressed by the unicorn story. And in fact, that's why I was skeptical. I was like, this is clearly cherry picked and it's like, you know, from a fairy tale and you put anything else in."
+    },
+    {
+      "speaker": 2,
+      "start": 1720.8105802047783,
+      "end": 1721.7150170648465,
+      "text": " It's just not useful."
+    },
+    {
+      "speaker": 0,
+      "start": 1722.1587030716723,
+      "end": 1759.0017064846418,
+      "text": " Well, when you do NLP, right, there's different kinds of tasks. Some tasks are easier to evaluate than others, like information extraction. Did you identify the right, that a company is an organization, or is it a rock band or whatever? But if you are doing search, it's very hard to know if you have the best ranking in a lot of cases. Or if you're doing summarization, there are many legitimate ways to summarize a paper. And so it's really hard to evaluate summarization. And if you're generating a story, you can generate almost anything and it's a story. So this is why I was not at all impressed by the unicorn example, but it turned out that actually there was more behind it than the cherry picked example. Although GPT-3."
+    },
+    {
+      "speaker": 2,
+      "start": 1758.8481228668943,
+      "end": 1765.1450511945393,
+      "text": " I wasn't impressed with GPT-3 myself until the Instruct GPT version came out. And the thing actually did your bidding."
+    },
+    {
+      "speaker": 0,
+      "start": 1765.3498293515358,
+      "end": 1766.9368600682594,
+      "text": " Yeah, well, they improved on it."
+    },
+    {
+      "speaker": 2,
+      "start": 1766.9368600682594,
+      "end": 1768.30204778157,
+      "text": " Yeah, they really improved on it."
+    },
+    {
+      "speaker": 0,
+      "start": 1768.4215017064846,
+      "end": 1794.8720136518773,
+      "text": " The problem is initially they were hyping it in ways that weren't helpful. And I know that now they're being more careful. I mean, open AI. So, or maybe they did have more behind the scene. They kind of said, oh, well, we know stuff that you don't know and we can't share it. So you want to see, you want everyone to be able to test things. You know, that's what happened with the fake blood testing company and all that. It was clear from the beginning it was fraud. So you have to, if you're going to make big claims, you need to be able to show your cards."
+    },
+    {
+      "speaker": 2,
+      "start": 1787.9095563139933,
+      "end": 1788.4556313993176,
+      "text": " and all that."
+    },
+    {
+      "speaker": 2,
+      "start": 1795.1109215017066,
+      "end": 1815.8617747440273,
+      "text": " Yep. All right. So zooming out a bit, what do you think is going to be the most exciting things to pay attention to on the research side of your fields? You really have more than one field, but I'd love to just hear your thought. What's what's in your mind these days, given this kind of big sea change as you describe it, which I agree."
+    },
+    {
+      "speaker": 0,
+      "start": 1816.254266211604,
+      "end": 1885.759385665529,
+      "text": " Well, there's a lot of people doing a lot of stuff. So there's a lot of people really interested in AI safety and AI anti-bias, all very important. I think there's also a lot of people looking at the AI human interface, which is something I've been interested for a long time. And that's super important. People doing driving car, self-driving cars have a bit of a headstart, mainly on seeing how hard the problem is. Actually, I had a PhD student, Cecilia Aragon, who looked at projecting LiDAR visualizations for helicopter pilots on the screen and how could we make that work and have them not crash? Because this could show them, if say a squall was ahead and they might potentially crash if they went into it. And we found that the simplest, most bare bones interface was the very best so that they weren't distracted. So I've always had questions about self-driving cars and that problem of the attention of the driver. And that's really not solved. And the studies I have seen on automatically generated language and interfaces, even some we've done in the Scholarfy, Semantic Scholar project, Semantic Reader project, we don't have good answers for that. People just start to rely on the automatically generated output. It's natural. And so that's a huge problem that needs to be solved."
+    },
+    {
+      "speaker": 2,
+      "start": 1850.1621160409557,
+      "end": 1850.6399317406144,
+      "text": " Text Ruth."
+    },
+    {
+      "speaker": 2,
+      "start": 1885.7764505119455,
+      "end": 1895.759385665529,
+      "text": " What are some of the ways that we could help people if everyone comes to rely on chat GPT for day to day work? What are some of the levers we can pull to help them?"
+    },
+    {
+      "speaker": 0,
+      "start": 1896.1860068259386,
+      "end": 1972.448805460751,
+      "text": " I haven't solved this problem. I mean, it's certainly good user interface design, understanding people. So HCI shows us how to study people and how they work and how they work with technology. So using HCI methods to deeply study that and in different contexts, it's different in a medical setting. There's a colleague that Ilifar Salehi here at the iSchool at Berkeley, who is looking at machine translation in a medical setting and when information is not translated correctly and how that can adversely impact marginalized communities when the translation isn't really the right thing and how to get the context right. So I think each setting is probably going to need some specialized research. And furthermore, one of your podcasts is about how do people inject poison, the training data and so on. And so you're gonna have to be very careful about attacks like that. It's not a field that I'm in. Perhaps it'll be important to have diversification in the different models so that there's ways to check them, make sure that they are safe and appropriate for a particular use. I think the techniques of HCI and ethnography really work independent of the context. It's not AI. People in AI don't necessarily want to sit down with people, humans and see their details and what they do and so on, but that's the only way to have really working systems that are good for society."
+    },
+    {
+      "speaker": 2,
+      "start": 1972.7559726962459,
+      "end": 1996.6467576791808,
+      "text": " Yeah, I've noticed that there's this kind of mindset of people who build AI, generally people who build AI systems. It's the engineering mindset. The more you can take the person out of the equation, the better, because I want my development environment to be nice and clean and straightforward, and I want to build something that I understand. And as soon as you get people involved, oof, people are complicated. But what you're saying is, you have to include the person."
+    },
+    {
+      "speaker": 0,
+      "start": 1997.1075085324233,
+      "end": 2026.1689419795223,
+      "text": " Yeah, and that's why I'm heartened by the new interest in NLP plus HCI. I've given, you know, there's been workshops I've asked to talk at because I've been thinking about it for a long time. But it's true that a lot of people who are making the biggest advances in the NLP AI field are mathematicians or physicists, and it's just not what they think about. They like to think abstract way and they're brilliant and they're really improving these systems but we need teams to work on technology. No one, you know, this, the one person band just doesn't exist in this space."
+    },
+    {
+      "speaker": 2,
+      "start": 2026.5273037542663,
+      "end": 2032.585324232082,
+      "text": " So what would you say to students coming into these fields just now? Has the advice changed at all?"
+    },
+    {
+      "speaker": 0,
+      "start": 2032.636518771331,
+      "end": 2049.10409556314,
+      "text": " It's hard to know what to say right now, it's moving so fast. What I say to all students is, what are you passionate about? What really interests you? Do that. Don't do the trendiest thing for its own sake. It's definitely a big question mark right now for research universities and AI labs and other research groups."
+    },
+    {
+      "speaker": 0,
+      "start": 2049.8720136518773,
+      "end": 2122.2781569965873,
+      "text": " If there's a big microscope that some people have and you don't, how do you compete? And there's open source efforts, things that Hugging Face and others are doing. I think the government's, US government's interested as well in giving everybody a microscope, meaning these large language models and the ability to run them. And I think that people are very aware of that issue. But then if you want to do advanced research on this, you get brilliant people like Agent Choi at University of Washington and AI2 that are showing that you can do a lot with much less. You don't need to have all these parameters and so on. And that's where the university can help. The university people are also gonna be looking at how do you save energy? Well, I mean, so is industry, but how do you save energy when you use these? It's very wasteful right now. These are all great areas for research. And of course, understanding what these models are doing, understanding the mind better. Can they help us understand the mind in some way? I'm sure psychologists are thinking about that. There's work already. I've seen work in linguistics on, say using GANs and adversarial methods to model linguistics in other species. So there's always more research questions. And if you're interested in being in industry and business, then go do that. And if you're interested in research, then find a problem that just really interests you because that's how you can finish your PhD."
+    },
+    {
+      "speaker": 2,
+      "start": 2122.602389078498,
+      "end": 2132.363481228669,
+      "text": " And just to bring it to a close, what's coming up in your life that listeners might be interested to know about? Is there a project or an event on the horizon?"
+    },
+    {
+      "speaker": 0,
+      "start": 2132.585324232082,
+      "end": 2176.9197952218433,
+      "text": " Well, I think the project that I'm most excited about is working with my PhD student, Chase Stokes, on understanding this interaction between language and visualization. And we just finished a paper that we submitted on if you place text on a chart and the goal of the chart is to make a prediction, how does text impact that prediction? Like who's gonna win an election by looking at this chart? And we actually found surprisingly that the text did not influence the prediction all that much in this case where people relied more on the visual input. But in another study we did where it was more what are you taking away information-wise than the way the text was used did have an influence. So we really need to do is understand this interplay more and I'm just very excited about that topic. I know it's kind of a niche topic, but it's what interests me."
+    },
+    {
+      "speaker": 2,
+      "start": 2177.005119453925,
+      "end": 2191.7662116040956,
+      "text": " Oh, far from niche. We're going into a very momentous political year, and these little interactions between a person and a piece of information can have massive, massive effects. You're right. We don't really understand how they work, do we?"
+    },
+    {
+      "speaker": 0,
+      "start": 2192.0733788395905,
+      "end": 2203.933447098976,
+      "text": " No, I like to work in topics where there isn't a lot of work at that time, like search interfaces and so on. And then when it becomes popular, I tend to move on. I think I can't compete or something. So I have to find a new thing that nobody's thinking about."
+    },
+    {
+      "speaker": 2,
+      "start": 2203.967576791809,
+      "end": 2208.5580204778157,
+      "text": " Uh oh, I might've just ruined your picnic. Now everyone's going to get interested in language and visualization."
+    },
+    {
+      "speaker": 0,
+      "start": 2208.5580204778157,
+      "end": 2213.5580204778157,
+      "text": " No, no, I want that. In fact, the keynote I gave, I think, you know, helped with that. So I want people to be working on this."
+    },
+    {
+      "speaker": 2,
+      "start": 2213.8481228668943,
+      "end": 2215.9129692832767,
+      "text": " Marty, thanks so much for talking with us."
+    },
+    {
+      "speaker": 0,
+      "start": 2216.117747440273,
+      "end": 2217.6194539249145,
+      "text": " It was a pleasure, really fun."
+    },
+    {
+      "speaker": 1,
+      "start": 2220.4180887372013,
+      "end": 2240.2474402730377,
+      "text": " All right, everyone, that's our show for today. To learn more about today's guest or the topics mentioned in this interview, visit twimmelai.com. Of course, if you like what you hear on the podcast, please subscribe, rate, and review the show on your favorite podcatcher. Thanks so much for listening and catch you next time."
+    },
+    {
+      "speaker": 1,
+      "start": 2242.9948805460754,
+      "end": 2245.5034129692835,
+      "text": " you"
+    }
+  ],
+  "speakers": [
+    "SPEAKER_02",
+    "SPEAKER_01",
+    "SPEAKER_00"
+  ]
+}
