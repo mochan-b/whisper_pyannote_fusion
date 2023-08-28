@@ -1,8 +1,8 @@
-from intervaltree import Interval, IntervalTree
+from intervaltree import IntervalTree
 from whisper_normalizer.english import EnglishTextNormalizer
 
-from whisper_pyannote_fusion.interval_utils import get_largest_intersection_segment
-from whisper_pyannote_fusion.wer import calc_wer, calc_wer_local, calc_wer_backtrace
+from .interval_utils import get_largest_intersection_segment
+from .wer import calc_wer_local, calc_wer_backtrace
 
 
 def calc_de_wer(reference_json, hypothesis_json, print_errors=False, normalize=False, ignore_length=3):

@@ -136,7 +136,7 @@ if __name__ == '__main__':
     print('----- Analysis of transcripts -----')
 
     # The analysis that we will be doing on the transcripts
-    fusion_methods = {4, 4.1, 4.2, 5, 6}
+    fusion_methods = {4, 4.1, 4.2, 5, 6, 7}
 
     ground_truth_data = '../data/gt_marti_john.json'
     whisper_transcript = '../data/whisper_transcript.json'
@@ -275,3 +275,18 @@ if __name__ == '__main__':
 
         we_der = calculate_de_wer(ground_truth_data, fusion_method6)
         print('DE-WER between ground truth vs Fusion method 6 output: ', we_der)
+
+    # Calculate the metrics for fusion method 7 : use whisper-x to align the transcript words with whisper words
+    if 7 in fusion_methods:
+        print('----- Analysis of fusion method 7 -----')
+
+        fusion_method7 = '../data/whisper_pyannote_fuse_method7.json'
+        wer, wer_normalized = calculate_wer_comparison(ground_truth_data, fusion_method7)
+        print('WER between ground truth vs Fusion method 7 output: ', wer)
+        print('WER between ground truth vs Fusion method 7 output (normalized): ', wer_normalized)
+
+        der = calculate_der_comparison(ground_truth_data, fusion_method7)
+        print('DER between ground truth vs Fusion method 7 output: ', der)
+
+        we_der = calculate_de_wer(ground_truth_data, fusion_method7)
+        print('DE-WER between ground truth vs Fusion method 7 output: ', we_der)

@@ -2,17 +2,21 @@ import json
 import os
 
 import jellyfish
+import numpy as np
 import spacy
 import string
+import torch
 import whisper
+import whisperx
 from intervaltree import Interval, IntervalTree
+from pyannote.audio import Pipeline
 
-from whisper_pyannote_fusion.interval_utils import get_largest_intersection_segment, get_closest_intersection_segment, \
+from .interval_utils import get_largest_intersection_segment, get_closest_intersection_segment, \
     intersection_length
-from whisper_pyannote_fusion.wer import calc_wer_backtrace_words
+from .wer import calc_wer_backtrace_words
 
 # Sampling rate used by whisper internally after the audio file has been loaded
-WHISPER_SAMPLE_RATE = 16000
+WHISPER_SAMPLE_RATE = whisper.audio.SAMPLE_RATE
 
 
 def get_closest_pyannote_segment(pyannote_tree, whisper_segment):
@@ -172,7 +176,7 @@ def fuse_whisper_words_to_pyannote(whisper_json, pyannote_json):
     return {'dialogs': dialogs, 'speakers': pyannote_json['speakers']}
 
 
-def run_whisper_on_segments(segments, audio_filename, hints=None, initial_prompt=None):
+def run_whisper_on_segments(segments, audio_filename, HUGGING_FACE_API_KEY, hints=None, initial_prompt=None):
     """
     Run whisper on the segments
     :param segments: List of segments
@@ -186,6 +190,10 @@ def run_whisper_on_segments(segments, audio_filename, hints=None, initial_prompt
     model = whisper.load_model("large-v2")
     audio = whisper.load_audio(audio_filename)
 
+    # Load the model for voice activity detection
+    pipeline = Pipeline.from_pretrained("pyannote/voice-activity-detection",
+                                        use_auth_token=HUGGING_FACE_API_KEY)
+
     whisper_outputs = []
 
     # Run whisper on the segments
@@ -193,20 +201,30 @@ def run_whisper_on_segments(segments, audio_filename, hints=None, initial_prompt
         audio_segment_start = int(WHISPER_SAMPLE_RATE * segment['start'])
         audio_segment_end = int(WHISPER_SAMPLE_RATE * segment['end'])
         segment_audio = audio[audio_segment_start:audio_segment_end]
+
+        # Run voice activity detection on the segment
+        audio_data = torch.tensor(np.row_stack((segment_audio, segment_audio)), dtype=torch.float32)
+        output = pipeline({"waveform": audio_data, "sample_rate": WHISPER_SAMPLE_RATE})
+        voice_activity_detection = output.get_timeline().support()
+
+        # If there is no voice activity detected, then add a blank line
+        if len(voice_activity_detection) == 0:
+            whisper_outputs.append({'text': ''})
+            continue
+
         if hints is not None:
-            segment_output = model.transcribe(segment_audio, prompt=hints[index])
+            segment_output = model.transcribe(segment_audio, prompt=hints[index], word_timestamps=True)
         elif initial_prompt is not None:
-            print(initial_prompt)
-            segment_output = model.transcribe(segment_audio, initial_prompt=initial_prompt)
+            segment_output = model.transcribe(segment_audio, initial_prompt=initial_prompt, word_timestamps=True)
         else:
-            segment_output = model.transcribe(segment_audio)
+            segment_output = model.transcribe(segment_audio, word_timestamps=True)
         whisper_outputs.append(segment_output)
 
     return {'whisper_outputs': whisper_outputs}
 
 
 def fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_filename, pyannote_whisper_json_filename,
-                                          initial_prompt=None):
+                                          HUGGING_FACE_API_KEY, initial_prompt=None):
     """
     For each pyannote segment, run whisper on the segment and add the result to the pyannote segment
     :param pyannote_json: Loaded json file for pyannote
@@ -225,7 +243,8 @@ def fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_filename, pyannot
     # Check if the file exists
     if not os.path.exists(pyannote_whisper_json_filename):
         # Load all the segments from pyannote
-        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, initial_prompt=initial_prompt)
+        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, HUGGING_FACE_API_KEY,
+                                                  initial_prompt=initial_prompt)
 
         # Write the data to a json file
         with open(pyannote_whisper_json_filename, 'w') as f:
@@ -240,8 +259,15 @@ def fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_filename, pyannot
     for index, segment in enumerate(pyannote_segments):
         whisper_second_output = whisper_outputs['whisper_outputs'][index]
         speaker_index = speakers.index(segment['speaker'])
+
+        words = []
+        # Make sure it has segments
+        if 'segments' in whisper_second_output:
+            for whisper_second_segment in whisper_second_output['segments']:
+                words.extend(whisper_second_segment['words'])
+
         dialogs.append({'speaker': speaker_index, 'start': segment['start'], 'end': segment['end'],
-                        'text': whisper_second_output['text']})
+                        'text': whisper_second_output['text'], 'words': words})
 
     return {'dialogs': dialogs, 'speakers': speakers}
 
@@ -259,7 +285,7 @@ def remove_punctuation_and_lowercase(sentence):
 
 
 def fuse_run_whisper_on_pyannote_segments_with_hints(whisper_json, pyannote_json, audio_filename,
-                                                     pyannote_whisper_json_filename):
+                                                     pyannote_whisper_json_filename, HUGGING_FACE_API_KEY):
     """
     For each pyannote segment, run whisper on the segment and add the result to the pyannote segment and use the hints
     from the whisper_json to improve the results
@@ -301,7 +327,8 @@ def fuse_run_whisper_on_pyannote_segments_with_hints(whisper_json, pyannote_json
             pyannote_hints.append(interval_transcript)
 
         # Load all the segments from pyannote
-        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, pyannote_hints)
+        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, HUGGING_FACE_API_KEY,
+                                                  pyannote_hints)
 
         # Write the data to a json file
         with open(pyannote_whisper_json_filename, 'w') as f:
@@ -423,3 +450,70 @@ def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=Non
         whisper_words_index += j
 
     return transcript_json
+
+
+def run_whisperx_alignment(whisper_json, audio_filename):
+    """
+    Take the whisper json and run the whisperx align on it to get precise word timings. Put the word timings on to
+    pyannote segments.
+    :param whisper_json: Whisper json data
+    :param audio_filename: Audio file that we want the transcript for
+    :return: Transcript data from whisperx alignment on pyannote segments and the alignment result
+    """
+
+    # Setup and run the whisperx model
+    device = 'cuda'
+    audio = whisperx.load_audio(audio_filename)
+    model_a, metadata = whisperx.load_align_model(language_code=whisper_json["language"], device=device)
+    alignment_result = whisperx.align(whisper_json["segments"], model_a, metadata, audio, device,
+                                      return_char_alignments=False)
+
+    return alignment_result
+
+
+def whisperx_align(pyannote_json, whisperx_alignment_json):
+    # Get the pyannote segments
+    pyannote_segments = pyannote_json['segments']
+    pyannote_speakers = pyannote_json['speakers']
+
+    # Get the whisperx words (called word-segments)
+    whisperx_words = whisperx_alignment_json['word_segments']
+
+    # Add all the pyannote segments to the interval tree
+    pyannote_segments_tree = IntervalTree()
+    for segment in pyannote_segments:
+        pyannote_segments_tree.addi(segment['start'], segment['end'], segment)
+
+    # Create an array to hold the words for each pyannote segment
+    for segment in pyannote_segments:
+        segment['words'] = []
+
+    # For each word, find the closest pyannote segment
+    for word in whisperx_words:
+        # Check that the word has a start and end time
+        if 'start' not in word or 'end' not in word:
+            continue
+        pyannote_segment = get_closest_intersection_segment(pyannote_segments_tree, word)
+        pyannote_segment.data['words'].append(word)
+
+    # Iterate over the pyannote segments and use the text from the whisper_outputs to create the dialogs
+    dialogs = []
+
+    for index, segment in enumerate(pyannote_segments):
+        dialog_words = []
+        dialog = ''
+
+        # Sort the list by start time
+        relevant_words = segment['words']
+        relevant_words.sort(key=lambda x: x['start'])
+
+        # Add the intersection words in to the dialogs and dialog words
+        for word in relevant_words:
+            dialog += word['word'] + ' '
+            dialog_words.append(word)
+
+        speaker_index = pyannote_speakers.index(segment['speaker'])
+        dialogs.append({'speaker': speaker_index, 'start': segment['start'], 'end': segment['end'],
+                        'text': dialog, 'words': dialog_words})
+
+    return {'dialogs': dialogs, 'speakers': pyannote_json['speakers']}

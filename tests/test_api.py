@@ -1,12 +1,15 @@
 import json
 import os
 
-from whisper_pyannote_fusion.fusion_methods import fuse_add_speaker_to_whisper_segments, fuse_add_transcript_to_pyannote_segments, \
+from whisper_pyannote_fusion.fusion_methods import fuse_add_speaker_to_whisper_segments, \
+    fuse_add_transcript_to_pyannote_segments, \
     fuse_whisper_words_to_pyannote, fuse_run_whisper_on_pyannote_segments, \
-    fuse_word_corrections
-from whisper_pyannote_fusion.whisper_pyannote_fusion import whisper_pyannote_fusion
+    fuse_word_corrections, run_whisperx_alignment
+from whisper_pyannote_fusion import whisper_pyannote_fusion
 
 data_dir_name = '../data/'
+
+HUGGING_FACE_API_KEY = "hf_invalid_key"
 
 
 def get_whisper_pyannote_json_files():
@@ -100,7 +103,8 @@ def test_pyannote_segment_run_whisper():
     """
     whisper_json, pyannote_json = get_whisper_pyannote_json()
     whisper_pyannote_result_filename = os.path.join(data_dir_name, 'whisper_pyannote_results_1.json')
-    result = fuse_run_whisper_on_pyannote_segments(pyannote_json, None, whisper_pyannote_result_filename)
+    result = fuse_run_whisper_on_pyannote_segments(pyannote_json, None, whisper_pyannote_result_filename,
+                                                   HUGGING_FACE_API_KEY)
     assert result is not None
     assert len(result['dialogs']) == 102
 
@@ -125,7 +129,8 @@ def test_correct_pyannote_with_whisper():
     whisper_json, pyannote_json = get_whisper_pyannote_json()
     whisper_pyannote_result_filename = os.path.join(data_dir_name, 'whisper_pyannote_results_1.json')
 
-    result_json = fuse_run_whisper_on_pyannote_segments(pyannote_json, None, whisper_pyannote_result_filename)
+    result_json = fuse_run_whisper_on_pyannote_segments(pyannote_json, None, whisper_pyannote_result_filename,
+                                                        HUGGING_FACE_API_KEY)
     corrected_json = fuse_word_corrections(whisper_json, result_json, logger=None)
 
     assert corrected_json is not None
@@ -141,7 +146,24 @@ def test_correct_pyannote_with_whisper_api():
 
     corrected_json = whisper_pyannote_fusion(None, 'correct_pyannote_with_whisper', whisper_json_filename,
                                              pyannote_json_filename,
-                                             pyannote_whisper_json_filename=whisper_pyannote_result_filename)
+                                             pyannote_whisper_json_filename=whisper_pyannote_result_filename,
+                                             HUGGING_FACE_API_KEY=HUGGING_FACE_API_KEY)
 
     assert corrected_json is not None
     assert len(corrected_json['dialogs']) == 102
+
+
+def test_whisperx_align_pyannote():
+    """
+    Test the whisperx align pyannote segments fusion method
+    """
+    audio_filename = os.path.join(data_dir_name, '626.mp3')
+    whisper_json_filename, pyannote_json_filename = get_whisper_pyannote_json_files()
+    whisperx_alignment_json_filename = os.path.join(data_dir_name, 'whisperx_alignment.json')
+    final_data = whisper_pyannote_fusion(audio_file=audio_filename, method='whisperx_align_pyannote',
+                                         whisper_json_file=whisper_json_filename,
+                                         pyannote_json_file=pyannote_json_filename,
+                                         whisperx_alignment_json_filename=whisperx_alignment_json_filename)
+
+    assert final_data is not None
+    assert len(final_data['dialogs']) == 102

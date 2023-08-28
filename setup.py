@@ -5,6 +5,7 @@ setup(
     version='0.0.1',
     description='Fuse whisper and pyannote results',
     author='Mochan Shrestha',
+    packages=['whisper_pyannote_fusion'],
     install_requires=[
         'jiwer',
         'pytest',
@@ -14,6 +15,8 @@ setup(
         'intervaltree',
         'openai-whisper',
         'spacy',
-        'jellyfish'
+        'jellyfish',
+        'torch',
+        'torchvision'
     ],
 )

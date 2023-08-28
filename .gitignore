@@ -1,6 +1,9 @@
 .idea
 __pycache__
 *.pyc
+build
+whisper_pyannote_fusion.egg-info
 
 .coverage
 Pipfile.lock
+config.py

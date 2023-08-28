@@ -6,13 +6,14 @@ name = "pypi"
 [packages]
 jiwer = "*"
 pytest = "*"
-"pyannote.audio" = "*"
-"pyannote.metrics" = "*"
 whisper-normalizer = "*"
 intervaltree = "*"
 openai-whisper = "*"
 spacy = "*"
 jellyfish = "*"
+whisperx = {git = "https://github.com/m-bain/whisperx.git"}
+lightning = "==2.0.1"
+"pyannote.audio" = {file = "https://github.com/pyannote/pyannote-audio/archive/refs/heads/develop.zip"}
 
 [dev-packages]
 

@@ -72,3 +72,27 @@ def test_get_closest_intersection_segment():
     assert closest_intersection_segment.begin == 12
     assert closest_intersection_segment.end == 20
     assert closest_intersection_segment.length() == 8
+
+
+def test_find_all_intersecting_intervals():
+    """
+    Test of the overlap and envelop functions of the interval tree
+    """
+    main_interval = {'start': 1., 'end': 3.}
+    interval_1 = {'start': 0.9, 'end': 1.1}
+    interval_2 = {'start': 1.1, 'end': 1.2}
+    interval_3 = {'start': 2.9, 'end': 3.1}
+    interval_4 = {'start': 3.1, 'end': 3.2}
+    intervals = [interval_1, interval_2, interval_3, interval_4]
+
+    # All the intervals to the interval tree
+    tree = IntervalTree()
+    for interval in intervals:
+        tree.addi(interval['start'], interval['end'], interval)
+
+    # Find all the intersecting intervals to main_interval
+    intersecting_intervals = tree.envelop(main_interval['start'], main_interval['end'])
+    assert len(intersecting_intervals) == 1
+
+    intersecting_intervals = tree.overlap(main_interval['start'], main_interval['end'])
+    assert len(intersecting_intervals) == 3
