@@ -136,7 +136,7 @@ if __name__ == '__main__':
     print('----- Analysis of transcripts -----')
 
     # The analysis that we will be doing on the transcripts
-    fusion_methods = {4, 4.1, 4.2, 5, 6, 7}
+    fusion_methods = {0, 1, 2, 3, 4, 4.1, 4.2, 5, 6, 7}
 
     ground_truth_data = '../data/gt_marti_john.json'
     whisper_transcript = '../data/whisper_transcript.json'

@@ -243,8 +243,7 @@ def fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_filename, pyannot
     # Check if the file exists
     if not os.path.exists(pyannote_whisper_json_filename):
         # Load all the segments from pyannote
-        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, HUGGING_FACE_API_KEY,
-                                                  initial_prompt=initial_prompt)
+        whisper_outputs = run_whisper_on_segments(pyannote_segments, audio_filename, HUGGING_FACE_API_KEY)
 
         # Write the data to a json file
         with open(pyannote_whisper_json_filename, 'w') as f:

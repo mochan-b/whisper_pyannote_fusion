@@ -1,0 +1,446 @@
+0.0	21.86	 Hey, what′s up everyone, this is Sam. In today′s interview, part of our guest host series, you′ll hear a conversation led by longtime friend of the show, John Bohannon, Director of Science at Primer AI and former journalist for publications like Science Magazine, Wired, and others. I′m sure you′re going to enjoy this conversation, so let′s jump in. Peace.
+31.8	34.42	 Good morning, Marti. Good morning, John.
+34.86	40.0	 So we are just a few miles away from each other across a body of water. I′m in San
+40.0	45.14	 Francisco. You′re across the bay in Berkeley at your office at University of California,
+45.22	50.62	 Berkeley, where you are the head of the School of Information and a computer scientist who′s
+50.62	52.72	 been in the game for many decades. That′s right.
+52.94	57.16	 So I′m excited to finally do this interview because it′s been almost a year in the making.
+57.64	63.36	 We had a great interview here on the show with Orin Etzioni, former head of AI2 in
+63.36	67.76	 Seattle. After that interview, I asked Orin who would be a really good guest who would
+67.76	71.92	 have something worth sharing with the audience, and you were the first person he said.
+72.3	76.58	 Well, I listened to that interview, and it was an excellent interview. Orin is so articulate,
+76.78	81.56	 and you′re a great interviewer. I′m really honored to be here, and I′m really honored
+81.56	84.46	 that Orin thought it was worthwhile to recommend me.
+84.72	87.24	 You don′t do that many interviews, from what I gather.
+88.0	93.74	 No, I don′t. I′m a little bit camera shy, even though I do have to be on camera a lot.
+93.94	99.44	 Also, I like to be pretty careful about what I say, kind of more from the scientist′s
+99.44	105.76	 perspective. I think Orin is really great at linking science to business and where technology
+105.76	108.94	 is going. But yeah, I guess I′m just a little bit shy that way.
+109.26	114.08	 And that brings me to kind of the big story here. For those listening at home, Marty and I had a
+114.32	118.58	 chat recently in advance of this interview just to talk about what we might talk about.
+119.24	124.96	 And something really striking was that there′s this moment, let′s call it the chat GPT moment,
+125.26	130.4	 it′s really the large language model moment, where artificial intelligence seems to be at
+130.4	136.92	 some kind of inflection point. And you told me about your long career and how you have kind of
+136.92	141.68	 seen these moments before, and you′re more cautious about speaking publicly to add to the
+141.68	147.4	 hype cycle because it′s often disappointing and often regrettable. It′s easy to say things that
+147.4	152.28	 you later think were overhyped. Why is this different? Yeah, so I have seen a lot over the
+152.28	158.34	 years. I′ve been, I′d say, primarily in natural language processing, that part of AI. And it′s
+158.34	164.38	 just been a slog in terms of making progress and having machines be able to process language the
+164.38	168.52	 way people do. I entered it really because I was interested in the brain and interested in language
+168.6	173.56	 and I thought it would be kind of neat if we could have a computer do something with language, maybe
+173.56	179.24	 make cartoons speak, something like that. Animation interested me as well. We′re so far
+179.24	185.04	 from accomplishing anything that would be realistic that was more of a scientific endeavor.
+185.24	189.16	 I think I′m more of a scientist at heart than, you know, I′m not an entrepreneur, for example.
+189.56	197.96	 So I′ve seen claims, for example, I remember, I guess in the early 90s, there was this claim that
+197.96	204.0	 it was going to transform everything. And it was just so obviously ludicrous. But you also see,
+204.1	208.68	 you know, I remember when WebFountain came out with IBM and that was going to transform everything.
+209.16	213.58	 And, you know, it′s very much... Or how about IBM Watson? Well, you know, Watson was a special case
+213.58	219.08	 in that it was amazing what they did with Jeopardy and we can talk about that a bit more. But then
+219.08	224.32	 there was the claim that it was going to transform healthcare. And again, there was no path from that
+224.32	229.78	 to directly to healthcare being transformed in the immediate future. So I learned that if you
+229.78	234.6	 read the New York Times regularly, as I do, technology is in the business section as opposed
+234.6	240.6	 to the science section. And that′s kind of how technology is talked about in, at least in the US.
+240.98	245.52	 And of course, there is scientific reporting on it. And your podcast, I think, is wonderful in that
+245.52	249.84	 it goes into a lot of technical details, which is really exciting. But there′s always the business
+249.84	254.96	 angle when it comes to technology, even when I started out in the late 80s and, you know,
+255.2	261.18	 at most there were PCs. Well, in the late 80s and into the 90s, you became one of the main
+261.18	266.6	 researchers in search. And search really defined the era that I think is probably coming to a
+266.6	273.6	 close, the Google era, the era of search, search driving everything. And so you did really see the
+273.6	278.7	 business side of your research explode and change the world. Are we in a moment like that now?
+278.84	283.7	 Well, I wouldn′t mind talking about search for a few minutes since it is close to my heart. I mean,
+283.78	287.7	 I was interested in search because I wanted to be able to find things. I didn′t like the library
+287.7	292.68	 catalog when I was a little kid. And in fact, when I was an intern, I tried to be an intern in my
+292.68	297.22	 public library in high school and I was rejected because I wasn′t fast enough with filing
+297.22	301.3	 alphabetically in the card catalog. But I never thought that makes sense. So actually, I always
+301.3	306.72	 wanted to do a dynamic, smart version of the card catalog, which is what I did in search user
+306.74	312.06	 interfaces. There′s only one spot in the bookshelf for the book representation. What I focused on
+312.06	316.58	 was search user interfaces. I wouldn′t say I was the leading person in search, but I was a leader
+316.58	321.52	 in search user interfaces, which was kind of a hybrid topic at the time because most of the
+321.52	325.96	 search field was more on algorithms and not so much on the user interface. So I brought those
+325.96	333.96	 two together. And that was super exciting because the technology or the kind of framework that I
+334.18	339.06	 worked with, did become the standard for it′s still a standard faceted interaction, what you
+339.06	344.94	 see on a website when you′re shopping or library catalogs where you can slice and dice and filter
+344.94	350.7	 in different ways to find the items that you want. Getting that interface to work well was a big
+350.7	354.56	 challenge and that was sort of the breakthrough. What was the big problem with search interfaces
+354.56	360.6	 before you got into the game? Well, when I got into the game, most software did not have search
+360.96	365.88	 full stop. I mean, if you had an application, you couldn′t search for material within it.
+366.12	371.22	 It was just rare. It just didn′t happen much. When I got into the game, library catalogs were
+371.22	377.3	 searched by saying, you know, PN Bonneman comma J to find the personal name of the author. I mean,
+377.32	383.84	 it was command lined. And then there were Westlaw and these very expensive tools that you could
+383.84	389.14	 subscribe to, say if you were a lawyer, it was all keyword based. But the interface, there was no
+389.14	393.6	 thought to the interface. It was just a listing of the output that you got, usually in chronological
+393.6	398.52	 order. And so there was just no there there. The web changed things, but even with the web,
+398.58	402.68	 the initial search was, you know, the 10 blue links, which has actually been really hard to
+402.68	407.62	 improve on. And I would say until now, which we could get to the new moment, you know,
+407.62	411.68	 Google′s inched towards showing answers to questions. But I remember talking with someone
+411.68	414.68	 there saying that they were conservative initially because they didn′t want to show incorrect
+414.68	418.6	 information. And I thought that was the right way to go. Isn′t that one of the big shifts?
+418.64	424.78	 It′s like once upon a time, the purpose of search was to find a document or find a resource. But
+424.78	430.26	 nowadays you want the answer to a question. It′s almost a shift in intention. Actually, I speak to
+430.26	436.04	 that. I think people always wanted to ask questions, but it wasn′t possible to get an answer. So we
+436.04	441.0	 were just adapting to a bad system. Well, I always like to use the example of this old website called
+441.0	446.08	 Ask Jeeves, which was an attempt to allow people to ask questions and get answers. And it didn′t
+446.08	450.48	 work because the technology didn′t work, but people kept using it and always said they liked
+450.48	456.0	 it because they liked the idea of being able to ask a question and get an answer. And I have some
+456.0	461.72	 old screenshots of it. It just didn′t work. It′s like someone saying, oh, people like the mouse,
+461.84	466.18	 but now we have touchscreens and their tastes have changed. I′m like, no, no. It′s that we didn′t
+466.18	470.74	 know how to do touchscreens. We didn′t know how to do gestures. Technologically, in the early days,
+470.74	477.52	 it was a bridge to that. So often the interface we see now is the interface people always wanted,
+477.68	481.6	 but we didn′t have the technology to support it. And I′d say that′s true for question answering.
+481.96	487.24	 Now, there′s an exception for scholars and people doing research who want to see the documents and
+487.24	492.08	 primary resources, but that′s always been a minority. Yeah. So that brings us to the current
+492.08	496.82	 moment where the machine behind your screen that′s going to try and answer your questions
+496.88	502.18	 is suddenly, and I really mean suddenly, able to answer it almost like a human it feels like at
+502.18	508.36	 times. I agree. I think it′s a sea change. So I gave a keynote talk in October to the Information
+508.36	514.28	 Visualization Society, the IEEE Society. And in that talk, part of what I did was talked about,
+514.6	519.7	 you know, this is coming. We are going to see, instead of people developing visualizations
+519.7	524.32	 manually, it′s probably going to be done with text interface. And that′s a pretty radical
+524.32	529.94	 thing to say. And it was a month later that ChatGPT came out. And again, I told the audience
+529.94	535.74	 at that time that I′ve been in the NLP field for more than 25 years, maybe 30 years, and I′ve never
+535.74	541.54	 said this is a major change. And I say it now, I was saying it right before ChatGPT,
+541.84	547.98	 and it is transformational in terms of what we can do with processing language and producing
+547.98	553.5	 language. It′s not transformational in everything, as some of the hype says. Just like we had a
+553.5	560.06	 mouse, and then we had a touchscreen. We had keyword query or statistical ranking, or we had
+560.06	565.24	 these very complex pipelines for making natural language processing systems. And now it′s kind
+565.24	571.94	 of one relatively simple architecture that does everything as opposed to specific algorithms.
+572.36	578.58	 And it′s kind of head spinning, really. Well, simple schematically, but very complicated in
+578.58	581.64	 terms of what structure might be hidden in all those billions of neurons.
+582.14	585.9	 Yeah, it′s simple in terms of what the people have to do and complex in terms of what the
+585.9	590.18	 program is doing. I actually have an example that I was just trying last night, because
+590.18	595.74	 in the same talk, I gave an example of comparatives being very difficult to process automatically.
+595.94	596.4	 What′s a comparative?
+596.84	602.44	 So if you have, say, a review of a camera and someone in their regular casual language is
+602.44	611.18	 saying, oh, the DLSR has a wider angle, but the pixels are not as crisply retained. What are they
+611.18	616.5	 saying is better than what? There′s a lot implied there, and there′s an implicit comparison
+616.5	621.84	 between kind of the overall merits of some camera and then these specific components,
+622.36	626.78	 the pixels and so on. And I used that as an example of something that would be very hard to
+626.78	631.78	 write an algorithm to process automatically. And one of the reviewers of the paper that I wrote
+631.78	635.64	 said, yeah, that was true, but I just put this in ChatGPT and it worked really well.
+635.88	642.64	 So last night, I put all these super complex descriptions of reviews of cameras in ChatGPT,
+642.74	647.3	 and it did an amazing job of saying what was being compared to what. But I still say that
+647.3	652.58	 it would be very hard to write an algorithm to process the language to do that. It′s a general
+652.58	656.46	 purpose tool that does that as a side effect of what else it does.
+656.86	659.26	 Yeah, it′s sort of an all-purpose reasoning machine.
+659.56	661.74	 It′s something. I don′t know what it is.
+662.88	669.0	 So I watched your keynote and found it really, really remarkable. And something that was
+669.0	674.1	 gestating in my mind as I watched you walk through all the latest research that you could
+674.1	680.86	 dig up on the human-computer interface and also language and the visual component of people trying
+680.86	686.7	 to understand complex topics was that we′re probably soon heading into a world where you
+686.7	693.64	 essentially go to a whiteboard with a model like ChatGPT. So at work, when I need to understand
+693.64	698.58	 something really complicated or communicate something really complicated or collaborate
+698.58	703.36	 with someone on a really complicated problem, we go to the whiteboard. It′s sort of the best
+703.36	706.82	 environment to do this. What that means is you have all the affordances of language,
+707.2	711.02	 just speaking one-on-one, and you also have this whiteboard next to you that you can
+711.18	716.56	 diagram things, correct things, point things out visually. And so it′s sort of maximum bandwidth,
+716.84	722.7	 and it feels like the most comfortable way to navigate really complicated things. I think that
+722.7	728.04	 we′ve clearly gone way down the road of the chat side of this, the language side of this.
+728.5	732.08	 You can interact with ChatGPT and talk about really complicated things,
+732.26	741.0	 maybe even solve problems together. But there isn′t yet that whiteboard, but I think it′s
+741.0	747.18	 safe to say that we′re headed towards AI whiteboards. And you have been grappling with
+747.18	754.58	 the nuts and bolts of how you communicate both visually and with language, and how the two play
+754.58	759.92	 off each other, sometimes synergistically. I′d love to pick your brain just on what it′s going
+759.92	764.6	 to mean heading into a world of AI whiteboards. And of course, it goes way beyond whiteboards.
+764.66	769.6	 It can show you arbitrary images, videos it generates, things it finds from the internet,
+769.6	772.68	 and actually points things out and illustrates it.
+773.02	778.26	 Yeah, I think that there′s a lot of potential for these tools, these large language model-based
+778.26	783.64	 tools, to be collaborators in thinking. I think that′s what you mean by the whiteboard.
+783.66	783.98	 Yeah.
+784.14	790.6	 But after I had done my keynote, I did actually ask ChatGPT to make an outline of a talk on the
+790.6	795.04	 subject that I had selected. And it was not very creative. It said things that made sense,
+795.04	799.62	 but it would have been, I guess, somebody who kind of knew the field, but was not
+799.62	804.76	 innovating, was not seeing the future. And so, I don′t know that it′s capable of doing that.
+805.18	810.78	 Yet, I listened to the interview with Sergey, and he, here at Berkeley, Sergey Levin on
+810.78	815.32	 reinforcement learning, and he kind of pointed out that it′s not using technology to
+815.32	819.76	 kind of do future sequencing. But they′re working on it, I guess, or they might work on it.
+819.94	823.22	 Yeah. No doubt the human is going to have to do most of the intellectual heavy lifting
+823.38	829.84	 in the beginning. I mean, what is it going to mean for information sharing and explaining when we can
+829.84	834.44	 use something as powerful as ChatGPT in the language regime, also in the visual regime?
+834.96	839.08	 Yeah. So, and referring back to that keynote a bit, the topic is the intersection of language
+839.08	844.22	 and visualization. Because the information visualization community focuses reasonably
+844.22	848.38	 on how to visualize data, how to visualize information. And there′s been less of a
+848.38	853.94	 focus of how does language or text overlay on that or interact with that. And I mentioned this
+853.94	859.04	 in our earlier conversation with John, that for many semesters or many years, I was teaching
+859.04	863.38	 natural language processing in the fall and information visualization in the spring,
+863.72	868.84	 and thinking about what sort of information can be represented in each modality. And can you
+868.84	873.78	 convert one to the other directly? And I think the answer is no. They show or they explain different
+874.32	878.78	 visuals, explain different things than text. And if you think about the movie versus the book,
+878.86	883.34	 that′s like the best example. There are some books written to be made into movies. You think
+883.34	887.66	 about the Harry Potter series, for example, and they′re very true to the original, I think. But
+887.66	894.04	 there′s a lot that don′t transfer so well. And a lot of it is about interiority and mood and things
+894.04	898.06	 like that, that mood is expressed differently with words than with images. And they complement
+898.06	902.76	 each other, of course, which is why the soundtrack is so important for the film. When you become a
+902.76	904.38	 novelist, you don′t have to write pictures in your novels anymore.
+904.6	909.0	 Except you pointed out in your keynote that really lovely classic book by Scott McCloud
+909.0	914.72	 on how comic books work. You pointed out that there′s a method to it. There′s a kind of
+914.72	919.42	 balance between the visual and the language. And sometimes one can do most of the work and
+919.42	921.6	 sometimes the other. Couldn′t a model learn to do that?
+921.9	925.78	 Oh, well, could a model learn to do that? I mean, I think you could give it instructions to learn to
+925.78	930.1	 do that. I think right now what I′m interested in is how do people understand these things
+930.24	937.04	 and then how best to express information so that you promote understanding and you don′t promote
+937.04	941.6	 misinformation or you try to combat misinformation. I think it′s really important that we understand
+941.6	947.98	 how, and this is the human computer interaction, the HCI side of the AI HCI coin as I think about
+947.98	952.84	 them, understanding how people understand things so that we know what to tell the computers to do.
+953.14	957.54	 Right now we have people designing visualizations and they don′t necessarily know how to put the
+957.54	962.6	 design into language and neither will probably the computer. Or if the computer does know,
+962.66	966.64	 we at least need to know how to assess if it did a good job or not, which I think we need to do more
+966.64	972.06	 work on. Yeah. But just to go out one step out onto the limb, I know you′re very wary of speculation,
+972.44	977.12	 but this one feels like a safe speculation. I think that there are going to be emergent
+977.12	982.9	 capabilities with multimodal models that can deal both with the visual and the language side.
+983.22	988.72	 We don′t know exactly what they′ll be, but if we follow the trend with GPT-3 solely on the
+988.72	994.5	 language side, I wonder what kind of capabilities even are there to acquire on the visual side.
+994.96	1000.3	 Something that comes to my mind is simplifying something visually. Sometimes as simple as
+1000.3	1005.36	 underlining something can make something salient that helps explain the whole.
+1005.62	1010.44	 You have a project called ScholarPHY with Andrew Head at Berkeley. Is he a student of yours?
+1010.52	1013.9	 He was a student and a postdoc, and now he′s a professor at UPenn.
+1014.2	1018.9	 And it was a collaboration with people at AI2, hence the Oren reference.
+1019.18	1024.86	 I saw a breakdown of the project. It′s so neat. One of the really neat insights is when you read
+1024.86	1028.9	 something that′s got a lot of complicated mathematics in it, your brain is doing a ton
+1028.9	1034.4	 of work behind the scenes. If you had a better interface, for example, click on a variable in
+1034.4	1038.92	 a formula and just have it automatically pop out and say, this is what that represents.
+1038.92	1042.12	 So you offload some of that cognitive work you have to do.
+1042.52	1045.26	 I wonder if those kind of skills could be learned.
+1045.76	1049.24	 I hope so. And you mean the skills of visually showing the information?
+1049.66	1053.64	 Yeah. All those tricks that a good visual explainer just knows how to do.
+1054.02	1059.16	 Well, I am optimistic that these new models will make that automation task that we had
+1059.16	1065.28	 more effective. We worked on algorithms to do it automatically, but PDFs are really tricky
+1065.28	1069.56	 to process if you′re looking at the image level. And it′s very hard to find definitions
+1069.56	1074.26	 within a scientific paper because not everything is defined in a crisp way. And so really what you
+1074.26	1078.94	 want to do is generate your own text, but you want it to be accurate. It′s based on the text
+1078.94	1083.16	 of the paper. So we are actually looking to see if the latest models can help with the automation
+1083.16	1089.22	 of that task. But going back to a point you made earlier about creativity or new synthesis with
+1089.22	1093.66	 these models, I think someone who was hosted earlier on this podcast pointed out just even
+1093.66	1100.32	 the avocado sofa is a synergy of image. A human had to ask the query, but then the system was able
+1100.32	1106.4	 to blend these images together into something new. Although it doesn′t blend well if they don′t go
+1106.4	1111.64	 well together. In case anyone listening doesn′t know what the avocado chair is, this was the sort
+1111.64	1117.4	 of amazing DALI moment. So the DALI model came with a paper, and in that paper they had some
+1117.4	1122.34	 images as examples of what it could do. And one of them was make a chair made of an avocado,
+1122.34	1127.38	 something like that. And it was sort of amazingly convincingly good. It really was.
+1127.52	1130.76	 Yeah, although they are a little cherry picked because if you try to combine two things that
+1130.76	1135.24	 don′t often go well together or don′t appear together, it doesn′t work, or at least it didn′t
+1135.24	1136.64	 work when I was playing. It′ll flub it.
+1136.92	1142.72	 Yeah. But still, it′s a great example of synergy with these tools. And what I noted in the keynote
+1142.72	1147.86	 was that co-pilot these systems that aid in programming rather than, you know, there′s
+1147.86	1153.08	 been a long debate in HCI about when you′re developing, say, a user interface or doing data
+1153.08	1158.28	 analysis, should it be a command line or should it be a graphical user interface, a GUI? And of
+1158.28	1163.28	 course the answer is neither works perfectly, and people who are practitioners use a blend of both.
+1163.44	1168.86	 But it seems now, as I said about Ask Jeeves, what people really want to do is just use language to
+1168.86	1173.76	 say, do this, do that, and have the program get written. And then point and use gestures in the
+1173.76	1180.28	 interface to tweak it a bit, this multimodality. And again, there are tools to do that, but they′re
+1180.28	1188.12	 just not perfect. And the more that the algorithms improve, like with ChatGPT, the more effectively
+1188.12	1193.58	 we′ll be able to help people design visualizations where they don′t have to do a lot of coding.
+1193.96	1199.7	 It′s again, because it works, this general purpose tool that we′re talking about, as a side effect
+1199.88	1203.7	 of being, you know, produce the next word, it′s able to do all these other things,
+1203.78	1208.76	 and I think we don′t understand why, but that includes writing code or, you know, being smart
+1208.76	1213.92	 about adding things into code and so on. It wasn′t designed for that, but it seems like it will be
+1213.92	1219.54	 very effective at making it easier to design visualizations. The problem is, will it design
+1219.54	1223.38	 good visualizations? And, you know, that′s where we still have the human component.
+1223.8	1228.08	 Well, I think the safe way to use these things is to generate first drafts and iterate,
+1228.1	1232.48	 but that you have to be the human editor who makes the final call and do the driving.
+1232.86	1238.42	 Yeah, I agree. The work that we all do in the viz field can help determine what makes a good
+1238.42	1243.02	 design, help give guidelines. We do research, empirical research, and then we produce guidelines
+1243.02	1244.84	 for practitioners to follow.
+1245.2	1250.96	 So, bringing this all back to this moment, you′re a natural language processing practitioner. You′ve
+1250.96	1255.94	 spent years trying to teach machines to do useful things with language. And here we are,
+1255.94	1261.44	 in a moment where, I don′t know about you, but I feel like, wow, a lot of the things we solved,
+1262.22	1267.6	 you don′t have to worry about anymore. Just sort of more and more and more of all that hard,
+1267.72	1274.82	 algorithmic, hand-rolled feature engineering world is getting eaten up by large language
+1274.82	1281.5	 models that can simply speak. And they seem to have cognitive abilities that we would never have
+1281.5	1283.26	 dreamed would be in a machine.
+1283.46	1287.68	 Well, I′m not going there with you on the cognitive abilities that I′m very cautious
+1287.68	1288.56	 and skeptical about.
+1288.58	1289.76	 What should we call them? Behaviors?
+1290.34	1295.2	 I guess I don′t have my favorite word for it yet. Capabilities. It works a lot better than it used
+1295.2	1299.34	 to work. There′s a lot of people looking into, you know, why does it work? But, you know, each
+1299.34	1303.92	 time people start to make some progress on that, then a new model comes out that′s even harder
+1303.92	1308.3	 to understand because the scale is so much larger and we′re not good at thinking at a very large
+1308.3	1313.1	 scale. So, I think it′s going to take years before we understand what′s going on. I don′t
+1313.1	1318.52	 think it′s cognition. I′m very skeptical about that. It′s really, I mean, you know, we get into
+1318.52	1324.58	 philosophy and the Chinese room, that′s an old John Searle thought experiment. I mean, it′s
+1324.58	1329.74	 unfortunate, I guess, the use of Chinese in that particular example. But the idea being if you
+1329.74	1335.24	 replace each piece of your brain with a little, like, component, electronic component, and you
+1335.24	1339.14	 eventually replace every piece, is it still a brain? You know, are you still thinking? There′s
+1339.24	1344.72	 philosophy thought experiments. You might want to say, oh, well, this model that′s basically just
+1344.72	1348.86	 a bunch of numbers, a bunch of weights that have been trained, is thinking because you can say that
+1348.86	1353.14	 about the brain. But, you know, I′m not convinced. I think there′s a lot more going on in the brain
+1353.14	1356.96	 than is going on in these models. I agree with you. They′re very good at mimicking, you know,
+1356.96	1361.92	 at producing language and because language is distinctly human, it feels, you know, to a lot
+1361.92	1367.1	 of people like it′s human. When people are driving in their cars, they name their car, even old cars
+1367.1	1370.8	 that had no electronic components. They would name their cars. They would anthropomorphize their
+1370.8	1375.26	 cars. They feel a part of their cars. This is what we do with technology. People are going to get
+1375.26	1379.7	 used to it and then it′s going to become old news. And I think it′s great that we don′t have to
+1379.7	1385.48	 write all these tokenizers. The LP pipeline didn′t work. It was a mess. And there′s always new
+1385.48	1390.12	 problems and new questions to investigate from a research perspective. Researchers will not be out
+1390.12	1397.46	 of business. Of course, it does raise even more societal issues and dangers because of the ability
+1397.46	1403.34	 to fake information, to spread misinformation, and for people to not know what′s real and what′s
+1403.34	1407.28	 true. So we′re living through a very chaotic moment right now. I think we′re going to look
+1407.28	1411.22	 back 10 years from now and we′re going to go, wow, that was a chaotic time in technology. That
+1411.22	1415.92	 was a chaotic time politically. And hopefully we′ll be able to look back and say, thank goodness we
+1415.92	1422.54	 made it through. I have optimistic we will. Well, the curve you′re describing is pretty smooth.
+1423.04	1428.42	 It implies that there′s going to be another side to this. But if things keep exponentially changing,
+1428.86	1433.92	 there won′t necessarily be that moment because it′ll always feel like it does right now.
+1434.32	1440.1	 Well, the technology that this breakthrough with these models and really with training on huge
+1440.1	1445.14	 amounts of compute, huge amounts of data, I think it can only go so far. We don′t know the limits
+1445.14	1449.52	 of it, but it′s not going to be everything. If you look at people that are trying to study the
+1449.52	1453.94	 brain, you know, there′s other things going on there, different kinds of structure and so on.
+1454.14	1455.26	 You think we′re running out of data?
+1455.88	1461.48	 No, no, I don′t think that′s it. I think that the technique, it′s a very specific technique.
+1461.8	1467.34	 That alone I don′t think is going to be sufficient for being the same as humans. I don′t say we
+1467.34	1471.3	 could ever do it. Some people do argue that sequence prediction, which is essentially
+1471.72	1475.84	 what is driving this whole craze, might be all you need. What do you think about that?
+1476.48	1479.4	 Well, it′s certainly all you need for certain tasks. We′re seeing that now. It′s
+1479.4	1483.96	 really quite amazing. There is sometimes fine-tuning on the other side, but again,
+1484.26	1488.84	 who knows? I personally have been wrong about this particular technology. I think like a lot
+1488.84	1492.86	 of people, I just didn′t know how to think in terms of billions of parameters and we′re just
+1492.86	1497.76	 not good at that. There were some very ambitious people that just sort of went for it and surprised
+1497.76	1503.94	 all of us. I admit it, I did not see this coming and I was surprised by it. We have certainly in
+1503.94	1509.68	 the research community, it′s been developing gradually. Word2Vec came along. Going back even
+1509.68	1516.02	 farther, again, when I was doing early in the statistical NLP time, people were looking at SVDs,
+1516.16	1520.72	 singular value decomposition, and LSA, latent semantic analysis, which is similar in a lot of
+1520.72	1525.7	 ways. It was putting words in a matrix, well, words by document matrices and trying to find
+1525.8	1531.98	 similarities. Even before that, I was trying to solve the thesaurus or the synonym problem to help
+1531.98	1538.12	 with search. In search, you look for cat and it′s really feline and you don′t find anything. Going
+1538.12	1541.02	 back to the beginning of our conversation... And you didn′t want users to have to put in
+1541.02	1547.0	 every synonym imaginable for a cat just to find text about cats. Well, library catalogs had
+1547.0	1549.86	 synonyms in the early days. They weren′t that good, they weren′t dynamic, they didn′t handle
+1549.86	1555.3	 new technology and they were hard to use. WordNet came along and developed as a linguistic tool and
+1555.3	1560.48	 was the first person to download it, actually, when they had an FTP available. I did work on that and
+1560.48	1565.08	 it was like, oh, we can have a thesaurus. But it never worked. Whenever you had automatically
+1565.08	1571.04	 recommended terms for a term, some of them were right and some were wrong. That was true of SVD
+1571.04	1575.72	 and LSA as well. They worked in some cases, they didn′t work in other cases. It wasn′t until
+1575.72	1581.28	 Word2Vec came along and then people actually refined it to have different senses that it
+1581.28	1587.8	 actually started to work. I was saying, wow, this actually works and I′ve seen 20 years of this not
+1587.8	1593.72	 working. Of course, that kept being refined and being made more sophisticated with the
+1593.72	1597.94	 transformers came along and now the really large things. In the research community, it′s been
+1597.94	1603.3	 happening gradually. There were a lot of debates about counting versus probabilities and all this.
+1604.02	1610.5	 It′s not out of the blue, but I do, again, I admit that in this last year between the
+1610.86	1615.7	 combination of the image plus text generation and these language models where the input could be
+1615.7	1620.54	 text, we never thought the input could be text and then the output would be all these things.
+1620.68	1624.06	 We thought we had to program things. I don′t think the people who developed these models
+1624.06	1630.66	 expected that either. I believe it was a surprise to them. It is different now. I don′t think
+1630.66	1637.18	 everything is solved. I don′t think it′s AGI, but the tools are much more effective than they used to be.
+1637.18	1642.96	 Well, like you said, it′s all about capabilities. It turns out if you teach a very big neural
+1642.96	1647.84	 network how to predict the next word on a huge amount of internet text, all these really neat
+1647.84	1652.02	 emergent capabilities come into your hands. It couldn′t have been predicted. In fact,
+1652.08	1656.66	 no one really thought it would work as well as it does, I′m sure, but it does.
+1657.0	1663.66	 I wonder what happens when you teach a model to predict the next image in every YouTube video.
+1664.38	1665.3	 What capabilities emerge?
+1665.96	1670.02	 Yeah, it′s going to be interesting. It should be much better at generating videos. I guess
+1670.02	1674.04	 there′s already work on generating videos. I feel like generating videos is kind of like that
+1674.04	1679.62	 unicorn story moment. Remember in the early days of GPT-3 when they were trying to show how great
+1679.62	1684.04	 it was? They said, look, you can start the first sentence of a story about something that it
+1684.04	1693.64	 definitely has never seen. It was something about unicorns. It could just write a story. It′s
+1694.4	1699.74	 where you start with an image and you just say, hey, finish this. Make this a one-minute video
+1699.74	1705.52	 from this scene. That′ll happen. Just like with GPT-3, the thing that′s going to blow us away
+1705.52	1709.62	 are the things we can′t predict it′ll be able to do. It′s going to have capabilities
+1709.62	1710.98	 that just emerge.
+1711.56	1715.16	 Well, I have to admit that I was not at all impressed by the unicorn story. In fact,
+1715.22	1719.7	 that′s why I was skeptical. I was like, this is clearly cherry-picked and it′s from a fairy
+1719.7	1721.52	 tale and you put anything else in. It′s just not useful.
+1721.74	1727.58	 Well, when you do NLP, there′s different kinds of tasks. Some tasks are easier to evaluate than
+1727.58	1731.78	 others. Like information extraction, did you identify the right that a company is an
+1731.78	1737.34	 organization or is it a rock band or whatever? If you are doing search, it′s very hard to know if
+1737.34	1741.26	 you have the best ranking in a lot of cases. If you′re doing summarization, there are many
+1741.26	1747.2	 legitimate ways to summarize a paper. It′s really hard to evaluate summarization. If you′re
+1747.2	1752.14	 generating a story, you can generate almost anything and it′s a story. This is why I was
+1752.14	1756.82	 not at all impressed by the unicorn example, but it turned out that actually there was more behind
+1756.82	1761.1	 it than the cherry-picked example. Although GPT-3… I wasn′t impressed with GPT-3 myself until the
+1761.1	1764.88	 instruct GPT version came out and the thing actually did your bidding.
+1765.36	1768.2	 Yeah, well, they improved on it. Yeah, they really improved on it.
+1768.46	1773.36	 The problem is initially they were hyping it in ways that weren′t helpful. I know that now
+1773.36	1778.18	 they′re being more careful. I mean, open AI. Or maybe they did have more behind the scene. They
+1778.18	1781.86	 kind of said, oh, well, we know stuff that you don′t know and we can′t share it. So you want
+1781.86	1788.14	 everyone to be able to test things. That′s what happened with the fake blood testing company and
+1788.14	1792.52	 all that. It was clear from the beginning it was fraud. So you have to, if you′re going to make
+1792.52	1797.68	 big claims, you need to be able to show your cards. Yep. All right. So zooming out a bit,
+1797.84	1805.36	 what do you think is going to be the most exciting things to pay attention to on the research side of
+1805.36	1809.96	 your fields? You really have more than one field. But I′d love to just hear your thoughts. What′s
+1809.96	1815.66	 in your mind these days given this kind of big sea change as you describe it, which I agree.
+1816.3	1818.9	 Well, there′s a lot of people doing a lot of stuff. There′s a lot of people really interested
+1818.9	1824.82	 in AI safety and AI anti-bias. They′re all very important. I think there′s also a lot of people
+1824.82	1828.1	 looking at the AI human interface, which is something I′ve been interested in for a long
+1828.1	1833.24	 time. And that′s super important. People doing driving cars, self-driving cars have a bit of a
+1833.24	1838.2	 head start, mainly on seeing how hard the problem is. Actually, I had a PhD student at Cecilia
+1838.2	1844.48	 Aragon who looked at projecting LIDAR visualizations for helicopter pilots on the screen and how could
+1844.48	1849.3	 we make that work and have them not crash? Because this could show them if, say, a squall was ahead
+1849.3	1853.96	 and they might potentially crash if they went into it. And we found that the simplest,
+1854.12	1857.04	 most bare-bones interface was the very best so that they weren′t distracted.
+1857.66	1862.52	 So I′ve always had questions about self-driving cars and that problem of the attention of the
+1862.52	1868.54	 driver. And that′s really not solved. And the studies I have seen on automatically generated
+1868.54	1873.54	 language and interfaces, even some we′ve done in the Scholarify semantic scholar project,
+1873.84	1878.96	 semantic reader project, we don′t have good answers for that. People just start to rely
+1878.96	1884.92	 on the automatically generated output. It′s natural. And so that′s a huge problem that
+1884.92	1889.7	 needs to be solved. What are some of the ways that we could help people if everyone comes to rely on
+1889.7	1895.58	 chat GPT for day-to-day work? What are some of the levers we can pull to help them?
+1896.2	1900.82	 I haven′t solved this problem. I mean, it′s certainly good user interface design,
+1900.88	1905.48	 understanding people. So HCI shows us how to study people and how they work and how they
+1905.48	1911.54	 work with technology. So using HCI methods to deeply study that and in different contexts.
+1911.68	1915.86	 It′s different in a medical setting. There′s a colleague that, Ilifar Salehi here at the
+1915.86	1920.8	 iSchool at Berkeley, who is looking at machine translation in a medical setting and when
+1920.8	1926.32	 information is not translated correctly and how that can adversely impact marginalized communities
+1926.32	1930.3	 when the translation isn′t really the right thing and how to get the context right.
+1930.76	1936.56	 So I think each setting is probably going to need some specialized research. And furthermore,
+1936.96	1941.14	 one of your podcasts is about how do people inject poison, the training data and so on.
+1941.26	1944.62	 And so you're going to have to be very careful about attacks like that. It′s not a field that
+1944.62	1948.76	 I′m in. Perhaps it will be important to have diversification in the different models so that
+1948.76	1953.72	 there′s ways to check them, make sure that they are safe and appropriate for a particular use.
+1954.04	1959.9	 I think the techniques of HCI and ethnography really work independent of the context. It′s
+1959.9	1965.74	 not AI. People in AI don′t necessarily want to sit down with people, humans, and see their
+1965.74	1971.2	 details and what they do and so on. But that′s the only way to have really working systems that
+1971.2	1976.96	 are good for society. Yeah, I′ve noticed that there′s this kind of mindset of people who build
+1976.96	1982.82	 AI, generally people who build AI systems. It′s the engineering mindset. The more you can take
+1982.82	1987.72	 the person out of the equation, the better because I want my development environment to be nice and
+1987.72	1991.1	 clean and straightforward and I want to build something that I understand. And as soon as you
+1991.1	1996.08	 get people involved, oof, people are complicated. But what you′re saying is you have to include
+1996.08	2002.08	 the person. Yeah, and that′s why I′m heartened by the new interest in NLP plus HCI. There′s
+2002.08	2005.58	 been workshops I′ve asked to talk at because I′ve been thinking about it for a long time.
+2006.06	2011.04	 But it′s true that a lot of people who are making the biggest advances in the NLP AI field are
+2011.04	2015.54	 mathematicians or physicists and it′s just not what they think about. They like to think abstract
+2015.54	2020.56	 way and they′re brilliant and they′re really improving these systems. But we need teams to
+2020.56	2027.26	 work on technology. The one-person band just doesn′t exist in this space. So what would
+2027.26	2033.14	 you say to students coming into these fields just now? Has the advice changed at all? It′s hard to
+2033.14	2037.34	 know what to say right now. It′s moving so fast. What I say to all students is what are you
+2037.34	2042.22	 passionate about? What really interests you? Do that. Don′t do the trendiest thing for its own
+2042.22	2048.04	 sake. It′s definitely a big question mark right now for research universities and AI labs and
+2048.04	2053.6	 other research groups. If there′s a big microscope that some people have and you don′t, how do you
+2053.6	2059.1	 compete? There′s open source effort, things that Hugging Face and others are doing. I think the
+2059.1	2062.44	 US government is interested as well in giving everybody a microscope,
+2062.88	2067.36	 meaning these large language models and the ability to run them. I think that people are
+2067.36	2072.52	 very aware of that issue. But then if you want to do advanced research on this, you get brilliant
+2072.52	2077.6	 people like Agent Choi at University of Washington and AI2 that are showing that you can do a lot
+2077.6	2082.38	 with much less. You don′t need to have all these parameters and so on. That′s where the university
+2082.38	2086.2	 can help. The university people are also going to be looking at how do you save energy. Well,
+2086.32	2090.54	 I mean, so is industry. But how do you save energy when you use these? It′s very wasteful right now.
+2090.78	2095.1	 These are all great areas for research. Of course, understanding what these models are doing,
+2095.3	2099.42	 understanding the mind better, can they help us understand the mind in some way? I′m sure
+2099.42	2103.84	 psychologists are thinking about that. There′s work already, I′ve seen work in linguistics on
+2103.84	2109.84	 say using GANs and adversarial methods to model linguistics in other species.
+2110.52	2115.62	 There′s always more research questions. If you′re interested in being in industry and business,
+2115.74	2119.7	 then go do that. If you′re interested in research, then find a problem that just really
+2119.7	2122.0	 interests you because that′s how you can finish your PhD.
+2122.56	2127.64	 And just to bring it to a close, what′s coming up in your life that listeners might be
+2127.64	2132.16	 interested to know about? Is there a project or an event on the horizon?
+2132.56	2136.24	 Well, I think the project that I′m most excited about is working with my PhD student,
+2136.34	2141.08	 Chase Stokes, on understanding this interaction between language and visualization. We just
+2141.08	2147.94	 finished a paper that we submitted on if you place text on a chart and the goal of the chart is to
+2149.38	2153.1	 predict how text impacts that prediction. Like who′s going to win an election by looking at
+2153.1	2157.52	 this chart? And we actually found surprisingly that the text did not influence the prediction
+2157.52	2162.88	 all that much. In this case, where people relied more on the visual input. But in another study we
+2162.88	2168.04	 did where it was more what are you taking away information-wise, then the way the text was used
+2168.04	2173.0	 did have an influence. So what we really need to do is understand this interplay more. I′m just
+2173.0	2176.78	 very excited about that topic. I know it′s kind of a niche topic, but it′s what interests me.
+2176.8	2183.5	 Oh, far from niche. We′re going into a very momentous political year and these little
+2183.5	2188.94	 interactions between a person and a piece of information can have massive, massive effects.
+2189.28	2191.6	 You′re right. We don′t really understand how they work, do we?
+2192.0	2195.68	 No. I like to work in topics where there isn′t a lot of work at that time,
+2195.94	2199.86	 like search interfaces and so on. And then when it becomes popular, I tend to move on. I think
+2199.86	2203.78	 I can′t compete or something. So I have to find a new thing that nobody′s thinking about.
+2203.78	2206.88	 Uh-oh. I might have just ruined your picnic. Now everyone′s going to get interested in
+2206.88	2208.16	 language and visualization.
+2208.54	2212.44	 No, no. I want that. In fact, the keynote I gave, I think, helped with that. So I want
+2212.44	2213.48	 people to be working on this.
+2213.88	2215.74	 Marty, thanks so much for talking with us.
+2216.06	2217.52	 It was a pleasure. It was really fun.
+2220.08	2225.8	 All right, everyone. That′s our show for today. To learn more about today′s guest or the topics
+2225.8	2231.6	 mentioned in this interview, visit twimmelai.com. Of course, if you like what you hear on the
+2231.6	2236.58	 podcast, please subscribe, rate, and review the show on your favorite podcatcher.
+2237.14	2240.1	 Thanks so much for listening, and catch you next time.

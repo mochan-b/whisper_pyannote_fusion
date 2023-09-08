@@ -195,7 +195,7 @@ def whisper_pyannote_fusion(audio_file, method, whisper_json_file=None, pyannote
         if pyannote_json is None:
             raise ValueError('pyannote_json cannot be None')
         final_result = fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_file,
-                                                             pyannote_whisper_json_filename,
+                                                             pyannote_whisper_json_filename, HUGGING_FACE_API_KEY,
                                                              initial_prompt=initial_prompt)
     elif method == 'correct_pyannote_with_whisper':
         # Check that pyannote_json is not None
