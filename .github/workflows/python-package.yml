@@ -31,6 +31,7 @@ jobs:
         python -m pip install intervaltree jiwer spacy jellyfish whisper-normalizer
         python -m pip install openai-whisper
         python -m pip install https://github.com/pyannote/pyannote-audio/archive/refs/heads/develop.zip
+        python -m pip install git+https://github.com/m-bain/whisperx.git
         python -m pip install . --no-deps
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
