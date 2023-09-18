@@ -347,16 +347,18 @@ def fuse_run_whisper_on_pyannote_segments_with_hints(whisper_json, pyannote_json
     return {'dialogs': dialogs, 'speakers': pyannote_json['speakers']}
 
 
-def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=None):
+def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=None, initial_prompt=None):
     """
     Fuse the word corrections from whisper to the transcript
     :param whisper_json: Whisper json file
     :param transcript_json: Transcript json file
     :param n_words: Number of words to fuse at a time
     :param logger: Logger to use for logging
+    :param initial_prompt: Initial prompt from which we will only correct if given
     :return: Fused json file
     """
 
+    # Remove the punctuation and convert to lowercase
     replace_chars = ",.?'`′-"
     trans = str.maketrans("", "", replace_chars)
 
@@ -375,6 +377,12 @@ def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=Non
         # Add the index to each of the dialog words to keep track of the which segment the word came from
         dialog_words_index = [(word, index, k) for k, word in enumerate(dialog_words)]
         dialogs_words.extend(dialog_words_index)
+
+    # If there is initial prompt, create the list of words that are in the initial prompt
+    initial_prompt_words = None
+    if initial_prompt is not None:
+        initial_prompt_clean = initial_prompt.translate(trans).lower()
+        initial_prompt_words = initial_prompt_clean.split()
 
     # Iterate over the dialog words and replace the words from the whisper words.
     # We will step over n_words at a time
@@ -413,6 +421,14 @@ def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=Non
                 original_word = dialogs_words[dialogs_words_index + k][0]
                 candidate_word = whisper_words[whisper_words_index + j]
 
+                # If there is an initial prompt, then check if the word is in the initial prompt
+                if initial_prompt_words is not None:
+                    if candidate_word not in initial_prompt_words:
+                        j += 1
+                        k += 1
+                        logger.info('Not in initial prompt: ' + candidate_word + ' -> ' + original_word)
+                        continue
+
                 # Only consider the words that are phonetically similar
                 if jellyfish.metaphone(original_word) == jellyfish.metaphone(candidate_word):
                     original_whisper_word = whisper_words_original[whisper_words_index + j]
@@ -424,7 +440,6 @@ def fuse_word_corrections(whisper_json, transcript_json, n_words=250, logger=Non
                     # Log the words that are being replaced
                     if logger is not None:
                         logger.info(original_transcript_word + ' -> ' + original_whisper_word)
-                        # print(original_transcript_word, ' ', original_whisper_word)
 
                     # Replace the word
                     transcript_json['dialogs'][original_transcript_segment]['text'] = segment_text.replace(

@@ -1194,7 +1194,7 @@
       "speaker": 0,
       "start": 72.2098976109215,
       "end": 84.6331058020478,
-      "text": " Well, I listened to that interview and it was an excellent interview. Orin is so articulate and you're a great interviewer. And I'm really honored to be here. And I'm really honored that Orin thought it was worthwhile to recommend me.",
+      "text": " Well, I listened to that interview and it was an excellent interview. Orrin is so articulate and you're a great interviewer. And I'm really honored to be here. And I'm really honored that Orrin thought it was worthwhile to recommend me.",
       "words": [
         {
           "word": " Well,",
@@ -1522,7 +1522,7 @@
       "speaker": 0,
       "start": 87.65358361774744,
       "end": 109.03583617747441,
-      "text": " No, I don't. I'm a little bit camera shy, even though I do have to be on camera a lot. Also, I like to be pretty careful about what I say, kind of more from the scientist's perspective. I think Orin is really great at linking science to business and where technology is going. But yeah, I guess I'm just a little bit shy that way.",
+      "text": " No, I don't. I'm a little bit camera shy, even though I do have to be on camera a lot. Also, I like to be pretty careful about what I say, kind of more from the scientist's perspective. I think Oren is really great at linking science to business and where technology is going. But yeah, I guess I'm just a little bit shy that way.",
       "words": [
         {
           "word": " No,",
@@ -15076,7 +15076,7 @@
       "speaker": 0,
       "start": 772.9607508532423,
       "end": 819.8720136518772,
-      "text": " Yeah, I think that there's a lot of potential for these tools, these large language model-based tools to be collaborators in thinking. I think that's what you mean by the whiteboard. But after I'd done my keynote, I did actually ask Chachi Pate to make an outline of a talk on the subject that I had selected, and it was not very creative. It said things that made sense, but it would have been, I guess, somebody who kind of knew the field, but was not innovating, was not seeing the future. And so I don't know that it's capable of doing that. Yet, I listened to the interview with Sergey, and he, here at Berkeley, Sergey Levin on reinforcement learning, and he kind of pointed out that it's not using technology to kind of do future sequencing, but they're working on it, I guess, or they might work on it.",
+      "text": " Yeah, I think that there's a lot of potential for these tools, these large language model-based tools to be collaborators in thinking. I think that's what you mean by the whiteboard. But after I'd done my keynote, I did actually ask Chachi Pate to make an outline of a talk on the subject that I had selected, and it was not very creative. It said things that made sense, but it would have been, I guess, somebody who kind of knew the field, but was not innovating, was not seeing the future. And so I don't know that it's capable of doing that. Yet, I listened to the interview with Sergei, and he, here at Berkeley, Sergei Levin on reinforcement learning, and he kind of pointed out that it's not using technology to kind of do future sequencing, but they're working on it, I guess, or they might work on it.",
       "words": [
         {
           "word": " Yeah,",
@@ -19932,7 +19932,7 @@
       "speaker": 0,
       "start": 1010.844709897611,
       "end": 1019.2747440273038,
-      "text": " He was a student and a postdoc and now he's a professor at UPenn. And it was also in collaboration with people at AI2, you know, hence the Oren reference too.",
+      "text": " He was a student and a postdoc and now he's a professor at UPenn. And it was also in collaboration with people at AI2, you know, hence the Orin reference too.",
       "words": [
         {
           "word": " He",
@@ -34800,7 +34800,7 @@
       "speaker": 0,
       "start": 1722.1587030716723,
       "end": 1759.0017064846418,
-      "text": " Well, when you do NLP, right, there's different kinds of tasks. Some tasks are easier to evaluate than others, like information extraction. Did you identify the right, that a company is an organization or is it a rock band or whatever? But if you are doing search, it's very hard to know if you have the best ranking in a lot of cases. Or if you're doing summarization, there are many legitimate ways to summarize a paper. And so it's really hard to evaluate summarization. And if you're generating a story, you can generate almost anything and it's a story. So this is why I was not at all impressed by the unicorn example, but it turned out that actually there was more behind it than the cherry picked example. Although GPT-3\u2026",
+      "text": " Well, when you do NLP, right, there's different kinds of tasks. Some tasks are easier to evaluate than others, like information extraction. Did you identify the right, that a company is an organization or is it a rock band or whatever? But if you are doing search, it's very hard to know if you have the best ranking in a lot of cases. Or if you're doing summarization, there are many legitimate ways to summarize a paper. And so it's really hard to evaluate summarization. And if you're generating a story, you can generate almost anything and it's a story. So this is why I was not at all impressed by the unicorn example, but it turned out that actually there was more behind it than the cherry picked example. Although GPT-3.",
       "words": [
         {
           "word": " Well,",
@@ -36938,7 +36938,7 @@
       "speaker": 0,
       "start": 1816.254266211604,
       "end": 1885.759385665529,
-      "text": " Well, there's a lot of people doing a lot of stuff. So there's a lot of people really interested in AI safety and AI anti-bias, all very important. I think there's also a lot of people looking at the AI human interface, which is something I've been interested for a long time. And that's super important. People doing driving car, self-driving cars have a bit of a headstart, mainly on seeing how hard the problem is. Actually, I had a PhD student, Cecilia Aragon, who looked at projecting LiDAR visualizations for helicopter pilots on the screen and how could we make that work and have them not crash? Because this could show them, if say a squall was ahead and they might potentially crash if they went into it. And we found that the simplest, most bare bones interface was the very best so that they weren't distracted. So I've always had questions about self-driving cars and that problem of the attention of the driver. And that's really not solved. And the studies I have seen on automatically generated language and interfaces, even some we've done in the Scholarify Semantic Scholar project, Semantic Reader project, we don't have good answers for that. People just start to rely on the automatically generated output. It's natural. And so that's a huge problem that needs to be solved.",
+      "text": " Well, there's a lot of people doing a lot of stuff. So there's a lot of people really interested in AI safety and AI anti-bias, all very important. I think there's also a lot of people looking at the AI human interface, which is something I've been interested for a long time. And that's super important. People doing driving car, self-driving cars have a bit of a headstart, mainly on seeing how hard the problem is. Actually, I had a PhD student, Cecilia Aragon, who looked at projecting LiDAR visualizations for helicopter pilots on the screen and how could we make that work and have them not crash? Because this could show them, if say a squall was ahead and they might potentially crash if they went into it. And we found that the simplest, most bare bones interface was the very best so that they weren't distracted. So I've always had questions about self-driving cars and that problem of the attention of the driver. And that's really not solved. And the studies I have seen on automatically generated language and interfaces, even some we've done in the Scholarfy, Semantic Scholar project, Semantic Reader project, we don't have good answers for that. People just start to rely on the automatically generated output. It's natural. And so that's a huge problem that needs to be solved.",
       "words": [
         {
           "word": " Well,",

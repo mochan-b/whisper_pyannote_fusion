@@ -1,25 +1,61 @@
-2023-08-24 06:19:54,341 - INFO - Marty. -> Marti.
-2023-08-24 06:19:54,341 - INFO - Orrin -> Orin
-2023-08-24 06:19:54,341 - INFO - Orin -> Orin
-2023-08-24 06:19:54,364 - INFO - Oren -> Orin
-2023-08-24 06:19:54,644 - INFO - Orin -> Oren
-2023-08-24 06:19:54,876 - INFO - GPT-3. -> GPT-3…
-2023-08-24 06:19:54,923 - INFO - Scholarfy, -> Scholarify
-2023-08-24 06:19:54,993 - INFO - than -> then
-2023-08-28 17:58:57,643 - INFO - Marty. -> Marti.
-2023-08-28 17:58:57,643 - INFO - Orrin -> Orin
-2023-08-28 17:58:57,643 - INFO - Orin -> Orin
-2023-08-28 17:58:57,667 - INFO - Oren -> Orin
-2023-08-28 17:58:57,950 - INFO - Orin -> Oren
-2023-08-28 17:58:58,193 - INFO - GPT-3. -> GPT-3…
-2023-08-28 17:58:58,240 - INFO - Scholarfy, -> Scholarify
-2023-08-28 17:58:58,312 - INFO - than -> then
-2023-08-28 19:31:43,297 - INFO - Marty. -> Marti.
-2023-08-28 19:31:43,298 - INFO - Orrin -> Orin
-2023-08-28 19:31:43,298 - INFO - Orin -> Orin
-2023-08-28 19:31:43,321 - INFO - Oren -> Orin
-2023-08-28 19:31:43,533 - INFO - Sergei, -> Sergey,
-2023-08-28 19:31:43,533 - INFO - Sergei -> Sergey
-2023-08-28 19:31:43,604 - INFO - Orin -> Oren
-2023-08-28 19:31:43,841 - INFO - GPT-3. -> GPT-3…
-2023-08-28 19:31:43,890 - INFO - Scholarfy, -> Scholarify
+2023-09-12 03:46:14,754 - INFO - Marty. -> Marti.
+2023-09-12 03:46:14,754 - INFO - Not in initial prompt: orin -> orrin
+2023-09-12 03:46:14,754 - INFO - Not in initial prompt: orin -> orrin
+2023-09-12 03:46:14,779 - INFO - Not in initial prompt: orin -> oren
+2023-09-12 03:46:14,804 - INFO - Not in initial prompt: it -> itd
+2023-09-12 03:46:14,827 - INFO - Not in initial prompt: 80s -> eighties
+2023-09-12 03:46:14,827 - INFO - Not in initial prompt: 90s -> nineties
+2023-09-12 03:46:14,852 - INFO - Not in initial prompt: worked -> advocated
+2023-09-12 03:46:14,852 - INFO - Not in initial prompt: pn -> p
+2023-09-12 03:46:14,852 - INFO - Not in initial prompt: lined -> line
+2023-09-12 03:46:14,877 - INFO - Not in initial prompt: it -> which
+2023-09-12 03:46:14,877 - INFO - Not in initial prompt: was -> is
+2023-09-12 03:46:14,877 - INFO - Not in initial prompt: just -> still
+2023-09-12 03:46:14,877 - INFO - Not in initial prompt: inched -> inch
+2023-09-12 03:46:14,952 - INFO - Not in initial prompt: used -> use
+2023-09-12 03:46:14,952 - INFO - Not in initial prompt: humancomputer -> human
+2023-09-12 03:46:14,952 - INFO - Not in initial prompt: chatgpt -> chat
+2023-09-12 03:46:14,977 - INFO - Not in initial prompt: chatgpt -> chat
+2023-09-12 03:46:14,977 - INFO - Not in initial prompt: can -> could
+2023-09-12 03:46:14,977 - INFO - Not in initial prompt: it -> that
+2023-09-12 03:46:15,002 - INFO - Not in initial prompt: i -> id
+2023-09-12 03:46:15,002 - INFO - Not in initial prompt: chatgpt -> chachi
+2023-09-12 03:46:15,003 - INFO - Not in initial prompt: sergey -> sergei
+2023-09-12 03:46:15,003 - INFO - Not in initial prompt: sergey -> sergei
+2023-09-12 03:46:15,003 - INFO - Not in initial prompt: chatgpt -> chat
+2023-09-12 03:46:15,028 - INFO - Not in initial prompt: novelist -> grownup
+2023-09-12 03:46:15,028 - INFO - Not in initial prompt: learn -> learned
+2023-09-12 03:46:15,053 - INFO - Not in initial prompt: design -> language
+2023-09-12 03:46:15,078 - INFO - Not in initial prompt: oren -> orin
+2023-09-12 03:46:15,126 - INFO - Not in initial prompt: when -> what
+2023-09-12 03:46:15,201 - INFO - Not in initial prompt: i -> okay
+2023-09-12 03:46:15,226 - INFO - Not in initial prompt: you -> just
+2023-09-12 03:46:15,226 - INFO - Not in initial prompt: i -> im
+2023-09-12 03:46:15,226 - INFO - Not in initial prompt: dont -> not
+2023-09-12 03:46:15,226 - INFO - Not in initial prompt: say -> saying
+2023-09-12 03:46:15,226 - INFO - Not in initial prompt: finetuning -> fine
+2023-09-12 03:46:15,251 - INFO - Not in initial prompt: they -> it
+2023-09-12 03:46:15,276 - INFO - Not in initial prompt: everything -> everythings
+2023-09-12 03:46:15,300 - INFO - Not in initial prompt: videos -> video
+2023-09-12 03:46:15,300 - INFO - Not in initial prompt: oneminute -> one
+2023-09-12 03:46:15,300 - INFO - Not in initial prompt: cherrypicked -> cherry
+2023-09-12 03:46:15,325 - INFO - Not in initial prompt: cherrypicked -> cherry
+2023-09-12 03:46:15,325 - INFO - Not in initial prompt: gpt3… -> gpt3
+2023-09-12 03:46:15,325 - INFO - Not in initial prompt: yep -> and
+2023-09-12 03:46:15,349 - INFO - Not in initial prompt: thoughts -> thought
+2023-09-12 03:46:15,349 - INFO - Not in initial prompt: cars -> car
+2023-09-12 03:46:15,349 - INFO - Not in initial prompt: head -> headstart
+2023-09-12 03:46:15,349 - INFO - Not in initial prompt: barebones -> bare
+2023-09-12 03:46:15,375 - INFO - Not in initial prompt: scholarify -> scholarfy
+2023-09-12 03:46:15,375 - INFO - Not in initial prompt: daytoday -> day
+2023-09-12 03:46:15,375 - INFO - Not in initial prompt: going -> gonna
+2023-09-12 03:46:15,375 - INFO - Not in initial prompt: it -> itll
+2023-09-12 03:46:15,424 - INFO - Not in initial prompt: oneperson -> one
+2023-09-12 03:46:15,424 - INFO - Not in initial prompt: effort -> efforts
+2023-09-12 03:46:15,424 - INFO - Not in initial prompt: government -> governments
+2023-09-12 03:46:15,424 - INFO - Not in initial prompt: going -> gonna
+2023-09-12 03:46:15,448 - INFO - Not in initial prompt: predict -> make
+2023-09-12 03:46:15,448 - INFO - Not in initial prompt: impacts -> impact
+2023-09-12 03:46:15,448 - INFO - Not in initial prompt: going -> gonna
+2023-09-12 03:46:15,472 - INFO - Not in initial prompt: uhoh -> uh
+2023-09-12 03:46:15,472 - INFO - Not in initial prompt: might -> mightve

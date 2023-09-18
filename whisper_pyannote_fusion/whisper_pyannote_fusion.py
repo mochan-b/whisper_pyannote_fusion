@@ -127,6 +127,10 @@ def whisper_pyannote_fusion(audio_file, method, whisper_json_file=None, pyannote
     logger = logging.getLogger('fusion_logger')
     logger.setLevel(level=logging.INFO)
 
+    # Check if logger has a stream handler. If so, clear it out and just use new ones for this run
+    if len(logger.handlers) > 0:
+        logger.handlers.clear()
+
     # Create a handler for outputting log messages to a stream
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     stream_handler = logging.StreamHandler()
@@ -204,7 +208,7 @@ def whisper_pyannote_fusion(audio_file, method, whisper_json_file=None, pyannote
         final_result = fuse_run_whisper_on_pyannote_segments(pyannote_json, audio_file,
                                                              pyannote_whisper_json_filename, HUGGING_FACE_API_KEY,
                                                              initial_prompt=initial_prompt)
-        corrected_json = fuse_word_corrections(whisper_json, final_result, logger=logger)
+        corrected_json = fuse_word_corrections(whisper_json, final_result, logger=logger, initial_prompt=initial_prompt)
     elif method == 'whisperx_align_pyannote':
         if not os.path.exists(whisperx_alignment_json_filename):
             whisperx_alignment_json = run_whisperx_alignment(whisper_json=whisper_json,

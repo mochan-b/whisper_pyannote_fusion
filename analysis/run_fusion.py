@@ -39,7 +39,7 @@ def main(data_dir):
         pyannote_result = json.load(f)
 
     # Specify which fusion methods to generate files for
-    fusion_methods = {6}
+    fusion_methods = {7}
 
     # Fuse the data and get the transcript output
     if 1 in fusion_methods:
@@ -135,8 +135,13 @@ def main(data_dir):
         with open(previous_fused_json_filename, 'r') as f:
             fused_result = json.load(f)
 
+        # Read the summary of the podcast and use that as the initial prompt
+        prompt_file = os.path.join(data_dir, 'summary.txt')
+        with open(prompt_file, 'r') as f:
+            prompt = f.read()
+
         # Fuse the data and get the transcript output
-        fused_result_fixed = fuse_word_corrections(whisper_result, fused_result, logger=logger)
+        fused_result_fixed = fuse_word_corrections(whisper_result, fused_result, logger=logger, initial_prompt=prompt)
 
         # Write the file as json to data folder as whisper_pyannote_fuse_method1.json
         with open(os.path.join(data_dir, "whisper_pyannote_fuse_method6.json"), "w") as f:
