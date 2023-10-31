@@ -7,7 +7,6 @@ import spacy
 import string
 import torch
 import whisper
-import whisperx
 from intervaltree import Interval, IntervalTree
 from pyannote.audio import Pipeline
 
@@ -477,6 +476,7 @@ def run_whisperx_alignment(whisper_json, audio_filename):
 
     # Setup and run the whisperx model
     device = 'cuda'
+    import whisperx
     audio = whisperx.load_audio(audio_filename)
     model_a, metadata = whisperx.load_align_model(language_code=whisper_json["language"], device=device)
     alignment_result = whisperx.align(whisper_json["segments"], model_a, metadata, audio, device,
