@@ -161,6 +161,8 @@ def whisper_pyannote_fusion(audio_file, method, whisper_json_file=None, pyannote
             if pyannote_json_file is not None:
                 with open(pyannote_json_file, 'w') as f:
                     f.write(pyannote_json)
+                # Convert the pyannote string to a json dictionary
+                pyannote_json = json.loads(pyannote_json)
         else:
             with open(pyannote_json_file, 'r') as f:
                 pyannote_json = json.load(f)
