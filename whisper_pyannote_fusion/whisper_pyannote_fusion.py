@@ -6,7 +6,7 @@ import pyannote
 import whisper
 import os
 import logging
-from pyannote.audio import Pipeline
+from pyannote.audio import Pipeline, Audio
 
 from .fusion_methods import fuse_add_speaker_to_whisper_segments, \
     fuse_add_transcript_to_pyannote_segments, \
@@ -51,7 +51,12 @@ def run_pyannote(audio_file, HUGGING_FACE_API_KEY):
     pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization',
                                         use_auth_token=HUGGING_FACE_API_KEY)
     pipeline.to(torch.device("cuda"))
-    diarization = pipeline(audio_file)
+
+    # Load the audio file and downmix and downssample it
+    io = Audio(mono='downmix', sample_rate=16000)
+    waveform, sample_rate = io(audio_file)
+
+    diarization = pipeline({"waveform": waveform, "sample_rate": sample_rate})
     json_output = convert_diarization_to_json(diarization)
 
     return json_output

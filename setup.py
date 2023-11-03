@@ -7,7 +7,7 @@ http://mochan.info/deep-learning/whisper/pyannote/asr/diarization/2023/09/07/whi
 
 setup(
     name='whisper-pyannote-fusion',
-    version='0.0.3',
+    version='0.0.5',
     description='Fuse whisper and pyannote results',
     author='Mochan Shrestha',
     packages=['whisper_pyannote_fusion'],
